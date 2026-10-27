@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOVA</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #1f1f1f; }
+    .wall { height: 100vh; display: flex; flex-direction: column; }
+    .row { flex: 1; display: flex; align-items: center; overflow: hidden; background: #1f1f1f; }
+    .row:nth-child(even) { background: #fff; }
+    .track { display: flex; width: max-content; filter: blur(3.6px); animation: scroll 60s linear infinite; }
+    .row:nth-child(even) .track { animation-direction: reverse; }
+    .track img { height: 56px; width: auto; margin-right: 64px; flex-shrink: 0; }
+    @keyframes scroll { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+    @media (max-width: 600px) { .track img { height: 34px; margin-right: 36px; } }
+    @media (prefers-reduced-motion: reduce) { .track { animation: none; } }
+    .mark { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); height: 34vh; width: auto; z-index: 1; }
+  </style>
+</head>
+<body>
+  <h1 style="position:absolute;left:-9999px">NOVA</h1>
+  <img class="mark" src="icon-white.png" alt="NOVA">
+  <div class="wall" aria-hidden="true"></div>
+  <script>
+    var wall = document.querySelector('.wall');
+    var logoH = window.innerWidth <= 600 ? 34 : 56;
+    var rows = Math.max(4, Math.floor(window.innerHeight / (logoH * 1.9)));
+    var perHalf = Math.ceil(window.innerWidth / (logoH * 2.8)) + 1;
+    for (var r = 0; r < rows; r++) {
+      var row = document.createElement('div');
+      row.className = 'row';
+      var track = document.createElement('div');
+      track.className = 'track';
+      var src = r % 2 === 0 ? 'logo-white.png' : 'logo-black.png';
+      for (var i = 0; i < perHalf * 2; i++) {
+        var img = document.createElement('img');
+        img.src = src;
+        img.alt = '';
+        track.appendChild(img);
+      }
+      row.appendChild(track);
+      wall.appendChild(row);
+    }
+  </script>
+</body>
+</html>
