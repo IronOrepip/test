@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>novaporto.eu</title>
+  <style>
+    body { margin: 0; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; font-family: system-ui, sans-serif; background: #fff; overflow-x: hidden; }
+    .marquee { width: 100%; background: #000; padding: 24px 0; overflow: hidden; margin-bottom: 3rem; }
+    .track { display: flex; width: max-content; animation: scroll 40s linear infinite; }
+    .track img { height: 60px; width: auto; margin-right: 48px; flex-shrink: 0; }
+    @keyframes scroll { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+    @media (prefers-reduced-motion: reduce) { .track { animation: none; } }
+    .text { padding: 0 16px; }
+    h3 { color: #000; font-size: 2rem; margin: 0 0 1rem; }
+    h2 { color: #555; font-size: 1.1rem; font-weight: 400; max-width: 36rem; margin: 0; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <div class="marquee" aria-label="NOVA">
+    <div class="track">
+      <img src="logo.png" alt="NOVA"><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt="">
+      <img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt=""><img src="logo.png" alt="">
+    </div>
+  </div>
+  <div class="text">
+    <h3>Coming soon</h3>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+  </div>
+</body>
+</html>
