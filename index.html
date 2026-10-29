@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NOVA</title>
+  <style>
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #1f1f1f; }
+    #bg { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+    /* Frosted "bathroom glass" square: see-through, blurred, with a pebbled texture */
+    :root { --s: min(52vh, 96vw); }
+    .mark { position: fixed; top: 50%; left: 50%; width: var(--s); height: var(--s); transform: translate(-50%, -50%); z-index: 1;
+      overflow: hidden; background: rgba(244, 240, 235, 0.07);
+      -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cfilter%20id%3D%22f%22%20x%3D%22-50%25%22%20y%3D%22-50%25%22%20width%3D%22200%25%22%20height%3D%22200%25%22%3E%3CfeGaussianBlur%20stdDeviation%3D%2210%22/%3E%3C/filter%3E%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2224%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23f%29%22/%3E%3C/svg%3E") center / 100% 100% no-repeat; mask: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Cfilter%20id%3D%22f%22%20x%3D%22-50%25%22%20y%3D%22-50%25%22%20width%3D%22200%25%22%20height%3D%22200%25%22%3E%3CfeGaussianBlur%20stdDeviation%3D%2210%22/%3E%3C/filter%3E%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%2260%22%20height%3D%2260%22%20rx%3D%2224%22%20fill%3D%22%23fff%22%20filter%3D%22url%28%23f%29%22/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+      -webkit-backdrop-filter: blur(4px) saturate(1.2); backdrop-filter: blur(4px) saturate(1.2); }
+    .mark::before { content: ""; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22300%22%3E%3Cfilter%20id%3D%22b%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.022%22%20numOctaves%3D%222%22%20seed%3D%227%22%20stitchTiles%3D%22stitch%22%20result%3D%22t%22/%3E%3CfeDiffuseLighting%20in%3D%22t%22%20lighting-color%3D%22%23fff%22%20surfaceScale%3D%225%22%20result%3D%22l%22%3E%3CfeDistantLight%20azimuth%3D%22225%22%20elevation%3D%2230%22/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23b%29%22/%3E%3C/svg%3E") 0 0 / calc(var(--s) * 0.6) repeat; mix-blend-mode: overlay; opacity: 0.22; }
+    .mark::after { content: ""; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%22160%22%3E%3Cfilter%20id%3D%22g%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.85%22%20numOctaves%3D%222%22%20stitchTiles%3D%22stitch%22/%3E%3CfeColorMatrix%20values%3D%220%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.55%200%22/%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23g%29%22/%3E%3C/svg%3E") 0 0 / 160px repeat; mix-blend-mode: soft-light; opacity: 0.25; }
+    .n { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: calc(var(--s) * 0.339); height: calc(var(--s) * 0.375); z-index: 2;
+      filter: drop-shadow(0 0 2px rgba(255, 250, 242, 1)) drop-shadow(0 0 8px rgba(255, 246, 232, 1)) drop-shadow(0 0 20px rgba(255, 240, 220, 0.85)) drop-shadow(0 0 44px rgba(255, 236, 214, 0.6));
+      animation: glow 4.5s ease-in-out infinite; }
+    /* Slow, soft "breathing" of the glow */
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 2px rgba(255, 250, 242, 1)) drop-shadow(0 0 8px rgba(255, 246, 232, 1)) drop-shadow(0 0 20px rgba(255, 240, 220, 0.85)) drop-shadow(0 0 44px rgba(255, 236, 214, 0.6)); }
+      50% { filter: drop-shadow(0 0 1px rgba(255, 250, 242, 0.6)) drop-shadow(0 0 4px rgba(255, 246, 232, 0.45)) drop-shadow(0 0 10px rgba(255, 240, 220, 0.3)) drop-shadow(0 0 22px rgba(255, 236, 214, 0.15)); }
+    }
+    @media (prefers-reduced-motion: reduce) { .n { animation: none; } }
+    .cc { position: fixed; z-index: 10; left: 50%; bottom: 0; transform: translateX(-50%); width: min(700px, 100%); box-sizing: border-box; isolation: isolate; overflow: hidden;
+      background: rgba(31, 31, 31, 0.10); -webkit-backdrop-filter: blur(16px) saturate(1.2); backdrop-filter: blur(16px) saturate(1.2);
+      color: #f4f0eb; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45); border-radius: 56px; padding: 66px 68px;
+      --f: 64px;
+      -webkit-mask: linear-gradient(to right, transparent, rgba(0,0,0,.15) calc(var(--f) * .35), rgba(0,0,0,.55) calc(var(--f) * .7), #000 var(--f), #000 calc(100% - var(--f)), rgba(0,0,0,.55) calc(100% - var(--f) * .7), rgba(0,0,0,.15) calc(100% - var(--f) * .35), transparent), linear-gradient(to bottom, transparent, rgba(0,0,0,.15) calc(var(--f) * .35), rgba(0,0,0,.55) calc(var(--f) * .7), #000 var(--f), #000 calc(100% - var(--f)), rgba(0,0,0,.55) calc(100% - var(--f) * .7), rgba(0,0,0,.15) calc(100% - var(--f) * .35), transparent);
+      -webkit-mask-composite: source-in; mask: linear-gradient(to right, transparent, rgba(0,0,0,.15) calc(var(--f) * .35), rgba(0,0,0,.55) calc(var(--f) * .7), #000 var(--f), #000 calc(100% - var(--f)), rgba(0,0,0,.55) calc(100% - var(--f) * .7), rgba(0,0,0,.15) calc(100% - var(--f) * .35), transparent), linear-gradient(to bottom, transparent, rgba(0,0,0,.15) calc(var(--f) * .35), rgba(0,0,0,.55) calc(var(--f) * .7), #000 var(--f), #000 calc(100% - var(--f)), rgba(0,0,0,.55) calc(100% - var(--f) * .7), rgba(0,0,0,.15) calc(100% - var(--f) * .35), transparent);
+      mask-composite: intersect; font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .cc::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22300%22%3E%3Cfilter%20id%3D%22b%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.022%22%20numOctaves%3D%222%22%20seed%3D%227%22%20stitchTiles%3D%22stitch%22%20result%3D%22t%22/%3E%3CfeDiffuseLighting%20in%3D%22t%22%20lighting-color%3D%22%23fff%22%20surfaceScale%3D%225%22%20result%3D%22l%22%3E%3CfeDistantLight%20azimuth%3D%22225%22%20elevation%3D%2230%22/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23b%29%22/%3E%3C/svg%3E") 0 0 / 180px repeat; mix-blend-mode: overlay; opacity: 0.22; pointer-events: none; }
+    .cc::after { content: ""; position: absolute; inset: 0; z-index: -1; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%22160%22%3E%3Cfilter%20id%3D%22g%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.85%22%20numOctaves%3D%222%22%20stitchTiles%3D%22stitch%22/%3E%3CfeColorMatrix%20values%3D%220%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.55%200%22/%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23g%29%22/%3E%3C/svg%3E") 0 0 / 160px repeat; mix-blend-mode: soft-light; opacity: 0.25; pointer-events: none; }
+    @media (max-width: 600px) { .cc { --f: 44px; padding: 50px 46px; } }
+    .cc[hidden], .cc-panel[hidden], .cc-reopen[hidden] { display: none; }
+    .cc h2 { margin: 0 0 6px; font-size: 17px; }
+    .cc p { margin: 0 0 14px; color: #f4f0eb; }
+    .cc-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cc button { flex: 1 1 auto; min-height: 42px; padding: 0 16px; border-radius: 10px; border: 1.5px solid rgba(244, 240, 235, 0.7); background: transparent; color: #f4f0eb; font: inherit; font-weight: 600; cursor: pointer; }
+    .cc button.primary { background: #f4f0eb; border-color: #f4f0eb; color: #1f1f1f; text-shadow: none; }
+    .cc button:focus-visible, .cc input:focus-visible, .cc-reopen:focus-visible { outline: 2px solid #e8552d; outline-offset: 2px; }
+    .cc-panel { margin: 0 0 14px; border-top: 1px solid rgba(244, 240, 235, 0.2); }
+    .cc-opt { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(244, 240, 235, 0.2); }
+    .cc-opt input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: #f4f0eb; flex-shrink: 0; }
+    .cc-opt strong { display: block; }
+    .cc-opt span { color: #ece7e0; font-size: 14px; }
+    .cc-reopen { position: fixed; z-index: 9; right: 16px; bottom: 16px; padding: 8px 14px; border: 0; border-radius: 999px; background: rgba(31, 31, 31, 0.10); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); color: #f4f0eb; font: 600 13px system-ui, -apple-system, "Segoe UI", sans-serif; cursor: pointer; }
+
+  </style>
+</head>
+<body>
+  <h1 style="position:absolute;left:-9999px">NOVA</h1>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="mark" aria-hidden="true"></div>
+  <img class="n" src="data:image/png;base64,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" alt="NOVA">
+  <script>
+    // Slowly flowing "oil slick" gradient, drawn with a WebGL shader.
+    var canvas = document.getElementById('bg');
+    var gl = canvas.getContext('webgl');
+    if (gl) {
+      var vs = 'attribute vec2 p; void main() { gl_Position = vec4(p, 0.0, 1.0); }';
+      var fs = [
+        'precision mediump float;',
+        'uniform vec2 res; uniform float t;',
+        'vec2 h(vec2 p) { p = vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5, 183.3))); return -1.0 + 2.0 * fract(sin(p) * 43758.5453); }',
+        'float n(vec2 p) { vec2 i = floor(p), f = fract(p), u = f * f * (3.0 - 2.0 * f);',
+        '  return mix(mix(dot(h(i), f), dot(h(i + vec2(1, 0)), f - vec2(1, 0)), u.x), mix(dot(h(i + vec2(0, 1)), f - vec2(0, 1)), dot(h(i + vec2(1, 1)), f - vec2(1, 1)), u.x), u.y); }',
+        'float fbm(vec2 p) { float v = 0.0, a = 0.5; for (int i = 0; i < 4; i++) { v += a * n(p); p *= 2.0; a *= 0.5; } return v; }',
+        'void main() {',
+        '  vec2 uv = gl_FragCoord.xy / res.y * 0.9; float s = t * 0.05;',
+        '  vec2 q = vec2(fbm(uv + s), fbm(uv + vec2(5.2, 1.3) - s));',
+        '  vec2 r = vec2(fbm(uv + 3.0 * q + vec2(1.7, 9.2) + s * 1.5), fbm(uv + 3.0 * q + vec2(8.3, 2.8) - s));',
+        '  float f = fbm(uv + 3.0 * r);',
+        '  vec3 base = vec3(0.122);',
+        '  float x = f * 2.2 + q.x * 1.3 + r.y * 0.8;',
+        '  vec3 iri = 0.5 + 0.5 * cos(6.2832 * (x + vec3(0.0, 0.18, 0.42)));',
+        '  iri = mix(iri, vec3(0.91, 0.333, 0.176), smoothstep(0.55, 0.95, iri.r) * 0.6);',
+        '  float glow = smoothstep(-0.25, 0.45, f + 0.6 * q.y);',
+        '  vec3 c = mix(base, iri * 0.85, glow * 0.8);',
+        '  gl_FragColor = vec4(c, 1.0);',
+        '}'
+      ].join('\n');
+      function sh(type, s) { var o = gl.createShader(type); gl.shaderSource(o, s); gl.compileShader(o); return o; }
+      var pr = gl.createProgram();
+      gl.attachShader(pr, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(pr, sh(gl.FRAGMENT_SHADER, fs));
+      gl.linkProgram(pr); gl.useProgram(pr);
+      gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+      var loc = gl.getAttribLocation(pr, 'p');
+      gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+      var uRes = gl.getUniformLocation(pr, 'res'), uT = gl.getUniformLocation(pr, 't');
+      var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function size() {
+        var d = Math.min(window.devicePixelRatio || 1, 1.5);
+        canvas.width = innerWidth * d; canvas.height = innerHeight * d;
+        gl.viewport(0, 0, canvas.width, canvas.height);
+      }
+      function frame(ms) {
+        gl.uniform2f(uRes, canvas.width, canvas.height);
+        gl.uniform1f(uT, still ? 20.0 : 20.0 + ms / 1000);
+        gl.drawArrays(gl.TRIANGLES, 0, 3);
+        if (!still) requestAnimationFrame(frame);
+      }
+      size(); addEventListener('resize', size);
+      requestAnimationFrame(frame);
+    }
+  </script>
+  <div class="cc" id="cc" role="dialog" aria-modal="false" aria-labelledby="cc-title" hidden>
+    <h2 id="cc-title">Cookie settings</h2>
+    <p>We use essential storage to make this site work. With your consent, we may also use analytics and marketing cookies. You can change your choice at any time.</p>
+    <div class="cc-panel" id="cc-panel" hidden>
+      <label class="cc-opt"><input type="checkbox" checked disabled><div><strong>Necessary</strong><span>Required for the site to work, for example remembering this choice. Always on.</span></div></label>
+      <label class="cc-opt"><input type="checkbox" id="cc-analytics"><div><strong>Analytics</strong><span>Helps us understand how visitors use the site.</span></div></label>
+      <label class="cc-opt"><input type="checkbox" id="cc-marketing"><div><strong>Marketing</strong><span>Used to show relevant content and measure campaigns.</span></div></label>
+    </div>
+    <div class="cc-actions">
+      <button type="button" id="cc-reject">Reject all</button>
+      <button type="button" id="cc-custom">Customise</button>
+      <button type="button" id="cc-save" hidden>Save choices</button>
+      <button type="button" class="primary" id="cc-accept">Accept all</button>
+    </div>
+  </div>
+  <button type="button" class="cc-reopen" id="cc-reopen" hidden>Cookie settings</button>
+  <script>
+    (function () {
+      var KEY = 'nova-consent-v1';
+      var $ = function (id) { return document.getElementById(id); };
+      var box = $('cc'), panel = $('cc-panel'), reopen = $('cc-reopen');
+      var read = function () { try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; } };
+      function apply(c) {
+        window.novaConsent = c;
+        document.dispatchEvent(new CustomEvent('nova-consent', { detail: c }));
+      }
+      function save(analytics, marketing) {
+        var c = { necessary: true, analytics: analytics, marketing: marketing, date: new Date().toISOString() };
+        try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+        box.hidden = true; reopen.hidden = false;
+        apply(c);
+      }
+      function open() {
+        var c = read() || {};
+        $('cc-analytics').checked = !!c.analytics;
+        $('cc-marketing').checked = !!c.marketing;
+        box.hidden = false; reopen.hidden = true;
+      }
+      $('cc-accept').onclick = function () { save(true, true); };
+      $('cc-reject').onclick = function () { save(false, false); };
+      $('cc-custom').onclick = function () { panel.hidden = false; this.hidden = true; $('cc-save').hidden = false; };
+      $('cc-save').onclick = function () { save($('cc-analytics').checked, $('cc-marketing').checked); };
+      reopen.onclick = open;
+      var c = read();
+      if (c) { reopen.hidden = false; apply(c); } else { open(); }
+    })();
+  </script>
+</body>
+</html>
