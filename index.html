@@ -39,8 +39,27 @@
     }
   </script>
   <style>
+    /* =========================================================
+       FROSTED GLASS SETTINGS (header + footer)
+       Change these values to tune the effect. Nothing else needed.
+       ========================================================= */
+    :root {
+      --glass-tint: 31, 31, 31;            /* RGB of the glass colour (#1f1f1f). Try 244, 240, 235 for a milky light glass */
+      --glass-header-opacity: 0.05;        /* 0 = fully clear, 1 = solid. Header tint strength */
+      --glass-footer-opacity: 0.05;        /* Footer tint strength */
+      --glass-blur: 10px;                  /* How blurry the background looks through the glass. 0px = no blur */
+      --glass-saturate: 1.5;               /* Colour boost of what shows through. 1 = normal, 2 = very vivid */
+      --glass-brightness: 0.95;            /* Darken (<1) or lighten (>1) what shows through */
+      --glass-fade: 32px;                  /* Soft fade length for the header, footer and cookie box edges. 0px = hard edge */
+      --glass-grain-opacity: 0;            /* Frosted grain texture. 0 = smooth glass, 0.3 = very grainy */
+      --glass-grain-size: 160px;           /* Grain tile size. Smaller = finer grain */
+      --glass-cookie-opacity: 0.4;         /* Cookie box tint. Higher = darker, easier to read */
+      --glass-cookie-fade: var(--glass-fade); /* Cookie box edge fade. Follows --glass-fade; put a number like 24px to set it separately */
+    }
+
     html, body { margin: 0; min-height: 100%; background: #1f1f1f; }
     body { overflow-x: hidden; }
+
     .nova-header { position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; min-height: 53px; padding: 10px max(24px, calc((100% - 1120px) / 2)); background: #1f1f1f; color: #f4f0eb; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
     .nova-brand { display: inline-flex; align-items: center; gap: 2px; }
     .nova-brand img { display: block; width: 100px; height: auto; }
@@ -87,6 +106,7 @@
 
     .nova-footer { position: relative; z-index: 3; padding: 68px 28px 72px; background: #1f1f1f; color: #f4f0eb; font: 15px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
     .nova-footer-container { width: min(1120px, 100%); margin: 0 auto; }
+
     .nova-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; }
     .nova-footer-brand img { display: block; width: 150px; height: auto; margin-bottom: 18px; }
     .nova-footer-brand p, .nova-footer-note { max-width: 310px; margin: 0; color: rgba(244, 240, 235, .72); }
@@ -160,6 +180,51 @@
     }
     @media (prefers-reduced-motion: reduce) { .nova-footer-ball { animation: none; } }
 
+    /* =========================================================
+       FROSTED GLASS EFFECT (uses the settings at the top)
+       The glass is drawn on ::after, which reaches past the bar by
+       --glass-fade and fades out there, so there is no hard edge line.
+       ========================================================= */
+    .nova-header, .nova-footer { isolation: isolate; background: transparent; border: 0; box-shadow: none; }
+    /* Header stays at the top while scrolling. Use position: relative to stop that */
+    .nova-header { position: sticky; top: 0; }
+    .nova-header::after, .nova-footer::after,
+    .nova-header::before, .nova-footer::before { content: ""; position: absolute; left: 0; right: 0; pointer-events: none; }
+    /* Glass layer */
+    .nova-header::after, .nova-footer::after { z-index: -2;
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) brightness(var(--glass-brightness));
+      backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) brightness(var(--glass-brightness)); }
+    .nova-header::after, .nova-header::before { top: 0; bottom: calc(var(--glass-fade) * -1);
+      -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--glass-fade)), transparent);
+      mask-image: linear-gradient(to bottom, #000 calc(100% - var(--glass-fade)), transparent); }
+    .nova-footer::after, .nova-footer::before { bottom: 0; top: calc(var(--glass-fade) * -1);
+      -webkit-mask-image: linear-gradient(to top, #000 calc(100% - var(--glass-fade)), transparent);
+      mask-image: linear-gradient(to top, #000 calc(100% - var(--glass-fade)), transparent); }
+    .nova-header::after { background: rgba(var(--glass-tint), var(--glass-header-opacity)); }
+    .nova-footer::after { background: rgba(var(--glass-tint), var(--glass-footer-opacity)); }
+    /* Grain layer: sits on the glass, under the text */
+    .nova-header::before, .nova-footer::before { z-index: -1;
+      background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%22160%22%3E%3Cfilter%20id%3D%22g%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.85%22%20numOctaves%3D%222%22%20stitchTiles%3D%22stitch%22/%3E%3CfeColorMatrix%20values%3D%220%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.55%200%22/%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23g%29%22/%3E%3C/svg%3E") 0 0 / var(--glass-grain-size) repeat;
+      opacity: var(--glass-grain-opacity); }
+    /* Browsers without backdrop-filter get a nearly solid panel so text stays readable */
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      .nova-header::after, .nova-footer::after { background: rgba(var(--glass-tint), 0.92); }
+    }
+
+
+    /* COOKIE BOX: frosted glass with soft faded edges */
+    .cc { background: transparent; box-shadow: none; border-radius: 0; overflow: visible;
+      -webkit-backdrop-filter: none; backdrop-filter: none;
+      padding: calc(24px + var(--glass-cookie-fade)); }
+    .cc::before { display: block; content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      opacity: 1; mix-blend-mode: normal;
+      background: rgba(var(--glass-tint), var(--glass-cookie-opacity));
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) brightness(var(--glass-brightness));
+      backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) brightness(var(--glass-brightness));
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--glass-cookie-fade), #000 calc(100% - var(--glass-cookie-fade)), transparent), linear-gradient(to bottom, transparent, #000 var(--glass-cookie-fade), #000 calc(100% - var(--glass-cookie-fade)), transparent);
+      -webkit-mask-composite: source-in;
+      mask-image: linear-gradient(to right, transparent, #000 var(--glass-cookie-fade), #000 calc(100% - var(--glass-cookie-fade)), transparent), linear-gradient(to bottom, transparent, #000 var(--glass-cookie-fade), #000 calc(100% - var(--glass-cookie-fade)), transparent);
+      mask-composite: intersect; }
   </style>
 </head>
 <body>
@@ -171,6 +236,7 @@
     <nav class="nova-header-nav" aria-label="Main navigation">
       <a href="./">Home</a>
       <a href="https://novaporto.eu">Log in</a>
+      <a href="https://novaporto.eu">About</a>
     </nav>
   </header>
   <main class="nova-hero">
@@ -333,7 +399,7 @@
 
         <div class="nova-footer-about">
           <h2 class="nova-footer-heading">About NOVA</h2>
-          <p class="nova-footer-note">NOVA brings people together through music, culture and unforgettable experiences.</p>
+          <p class="nova-footer-note">NOVA connects businesses with the products, partners, and supply solutions they need to serve their customers better.</p>
         </div>
 
         <div class="nova-footer-discover">
