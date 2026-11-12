@@ -9,6 +9,9 @@
     gtag('js', new Date());
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <title>NOVA | Build Your Next-Generation B2B Network</title>
   <meta name="description" content="We bring technology and innovative solutions to your customers. Build your next-generation B2B network with NOVA.">
   <link rel="canonical" href="https://novaporto.eu/">
@@ -44,6 +47,10 @@
        Change these values to tune the effect. Nothing else needed.
        ========================================================= */
     :root {
+      --font-body: "Barlow", Arial, sans-serif;
+      --font-display: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+      --accent: #f2500f;
       --glass-tint: 31, 31, 31;            /* RGB of the glass colour (#1f1f1f). Try 244, 240, 235 for a milky light glass */
       --glass-header-opacity: 0.05;        /* 0 = fully clear, 1 = solid. Header tint strength */
       --glass-footer-opacity: 0.05;        /* Footer tint strength */
@@ -58,18 +65,17 @@
     }
 
     html, body { margin: 0; min-height: 100%; background: #1f1f1f; }
-    body { overflow-x: hidden; }
+    body { overflow-x: hidden; font-family: var(--font-body); }
 
-    .nova-header { position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; min-height: 53px; padding: 10px max(24px, calc((100% - 1120px) / 2)); background: #1f1f1f; color: #f4f0eb; font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .nova-header { position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; min-height: 53px; padding: 10px max(24px, calc((100% - 1120px) / 2)); background: #1f1f1f; color: #f4f0eb; font: 500 14px/1.5 var(--font-body); }
     .nova-brand { display: inline-flex; align-items: center; gap: 2px; }
-    .nova-brand img { display: block; width: 100px; height: auto; }
-    .nova-brand-dot { align-self: flex-end; width: 9px; height: 9px; margin: 0 0 3px 1px; border-radius: 50%; background: #e8552d; }
+    .nova-wordmark { display: block; width: 100px; height: auto; color: #f4f5f6; }
     .nova-header-nav { display: flex; align-items: center; gap: 24px; }
     .nova-header-nav a { color: rgba(244, 240, 235, .82); font-weight: 600; text-decoration: none; transition: color .18s ease; }
-    .nova-header-nav a:hover, .nova-header-nav a:focus-visible { color: #e8552d; }
-    .nova-header-nav a:focus-visible { outline: 2px solid #e8552d; outline-offset: 4px; }
+    .nova-header-nav a:hover, .nova-header-nav a:focus-visible { color: var(--accent); }
+    .nova-header-nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     .nova-hero { position: relative; min-height: calc(100vh - 76px); min-height: calc(100svh - 76px); }
-    #bg { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+    #bg { position: fixed; inset: 0; z-index: 1; width: 100%; height: 100%; display: block; filter: blur(25px); transform: scale(1.05); }
     :root { --s: min(52vh, 96vw); }
     .n { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); width: calc(var(--s) * 0.339); height: calc(var(--s) * 0.375); z-index: 2;
       filter: drop-shadow(0 0 2px rgba(255, 250, 242, 1)) drop-shadow(0 0 8px rgba(255, 246, 232, 1)) drop-shadow(0 0 20px rgba(255, 240, 220, 0.85)) drop-shadow(0 0 44px rgba(255, 236, 214, 0.6));
@@ -86,7 +92,7 @@
       --f: 64px;
       -webkit-mask: linear-gradient(to right, transparent, rgba(0,0,0,.15) calc(var(--f) * .35), rgba(0,0,0,.55) calc(var(--f) * .7), #000 var(--f), #000 calc(100% - var(--f)), rgba(0,0,0,.55) calc(100% - var(--f) * .7), rgba(0,0,0,.15) calc(100% - var(--f) * .35), transparent), linear-gradient(to bottom, transparent, rgba(0,0,0,.15) calc(var(--f) * .35), rgba(0,0,0,.55) calc(var(--f) * .7), #000 var(--f), #000 calc(100% - var(--f)), rgba(0,0,0,.55) calc(100% - var(--f) * .7), rgba(0,0,0,.15) calc(100% - var(--f) * .35), transparent);
       -webkit-mask-composite: source-in; mask: linear-gradient(to right, transparent, rgba(0,0,0,.15) calc(var(--f) * .35), rgba(0,0,0,.55) calc(var(--f) * .7), #000 var(--f), #000 calc(100% - var(--f)), rgba(0,0,0,.55) calc(100% - var(--f) * .7), rgba(0,0,0,.15) calc(100% - var(--f) * .35), transparent), linear-gradient(to bottom, transparent, rgba(0,0,0,.15) calc(var(--f) * .35), rgba(0,0,0,.55) calc(var(--f) * .7), #000 var(--f), #000 calc(100% - var(--f)), rgba(0,0,0,.55) calc(100% - var(--f) * .7), rgba(0,0,0,.15) calc(100% - var(--f) * .35), transparent);
-      mask-composite: intersect; font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+      mask-composite: intersect; font: 15px/1.5 var(--font-body); }
     .cc::before { content: ""; position: absolute; inset: 0; z-index: -1; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22300%22%20height%3D%22300%22%3E%3Cfilter%20id%3D%22b%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.022%22%20numOctaves%3D%222%22%20seed%3D%227%22%20stitchTiles%3D%22stitch%22%20result%3D%22t%22/%3E%3CfeDiffuseLighting%20in%3D%22t%22%20lighting-color%3D%22%23fff%22%20surfaceScale%3D%225%22%20result%3D%22l%22%3E%3CfeDistantLight%20azimuth%3D%22225%22%20elevation%3D%2230%22/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23b%29%22/%3E%3C/svg%3E") 0 0 / 180px repeat; mix-blend-mode: overlay; opacity: 0.22; pointer-events: none; }
     .cc::after { content: ""; position: absolute; inset: 0; z-index: -1; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22160%22%20height%3D%22160%22%3E%3Cfilter%20id%3D%22g%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%220.85%22%20numOctaves%3D%222%22%20stitchTiles%3D%22stitch%22/%3E%3CfeColorMatrix%20values%3D%220%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200%201%20%200%200%200%200.55%200%22/%3E%3C/filter%3E%3Crect%20width%3D%22100%25%22%20height%3D%22100%25%22%20filter%3D%22url%28%23g%29%22/%3E%3C/svg%3E") 0 0 / 160px repeat; mix-blend-mode: soft-light; opacity: 0.25; pointer-events: none; }
     @media (max-width: 600px) { .cc { --f: 44px; padding: 50px 46px; } }
@@ -95,71 +101,59 @@
     .cc p { margin: 0 0 14px; color: #f4f0eb; }
     .cc-actions { display: flex; flex-wrap: wrap; gap: 8px; }
     .cc button { flex: 1 1 auto; min-height: 42px; padding: 0 16px; border-radius: 10px; border: 1.5px solid rgba(244, 240, 235, 0.7); background: transparent; color: #f4f0eb; font: inherit; font-weight: 600; cursor: pointer; transition: color .18s ease, background-color .18s ease, border-color .18s ease; }
-    .cc button:hover { border-color: #e8552d; background: #e8552d; color: #1f1f1f; }
+    .cc button:hover { border-color: var(--accent); background: var(--accent); color: #1f1f1f; }
     .cc button.primary { background: #f4f0eb; border-color: #f4f0eb; color: #1f1f1f; text-shadow: none; }
-    .cc button:focus-visible, .cc input:focus-visible { outline: 2px solid #e8552d; outline-offset: 2px; }
+    .cc button:focus-visible, .cc input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     .cc-panel { margin: 0 0 14px; border-top: 1px solid rgba(244, 240, 235, 0.2); }
     .cc-opt { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(244, 240, 235, 0.2); }
-    .cc-opt input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: #e8552d; flex-shrink: 0; }
+    .cc-opt input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--accent); flex-shrink: 0; }
     .cc-opt strong { display: block; }
     .cc-opt span { color: #ece7e0; font-size: 14px; }
 
-    .nova-footer { position: relative; z-index: 3; padding: 68px 28px 72px; background: #1f1f1f; color: #f4f0eb; font: 15px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .nova-footer { position: relative; z-index: 3; padding: 68px 28px 72px; background: #1f1f1f; color: #f4f0eb; font: 15px/1.6 var(--font-body); }
     .nova-footer-container { width: min(1120px, 100%); margin: 0 auto; }
 
     .nova-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; }
-    .nova-footer-brand img { display: block; width: 150px; height: auto; margin-bottom: 18px; }
+    .nova-footer-brand .nova-wordmark { width: 150px; margin-bottom: 18px; }
     .nova-footer-brand p, .nova-footer-note { max-width: 310px; margin: 0; color: rgba(244, 240, 235, .72); }
-    .nova-footer-heading { margin: 0 0 16px; color: #f4f0eb; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .nova-footer-heading { margin: 0 0 16px; color: #f4f0eb; font: 600 16px/1.1 var(--font-display); letter-spacing: .02em; text-transform: uppercase; }
     .nova-footer-links { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
     .nova-footer a { color: rgba(244, 240, 235, .78); text-decoration: none; transition: color .18s ease; }
     .nova-footer-links span { color: rgba(244, 240, 235, .78); }
-    .nova-footer a:hover { color: #e8552d; }
-    .nova-footer a:focus-visible { outline: 2px solid #e8552d; outline-offset: 4px; }
+    .nova-footer a:hover { color: var(--accent); }
+    .nova-footer a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     .nova-footer-cta { display: inline-flex; margin-top: 16px; padding: 10px 15px; border: 1px solid rgba(244, 240, 235, .35); border-radius: 999px; color: #f4f0eb !important; }
-    .nova-footer-cta:hover { border-color: #e8552d; background: #e8552d; color: #1f1f1f !important; }
+    .nova-footer-cta:hover { border-color: var(--accent); background: var(--accent); color: #1f1f1f !important; }
     .nova-footer-bottom { display: flex; justify-content: space-between; gap: 18px; margin-top: 52px; padding-top: 20px; border-top: 1px solid rgba(244, 240, 235, .16); }
     .nova-footer-bottom p { margin: 0; color: rgba(244, 240, 235, .56); font-size: 12px; }
     .nova-footer-bottom { display: grid; grid-template-columns: auto 1fr auto; align-items: center; }
     .nova-footer-grid { align-items: stretch; }
-    .nova-footer-lockup { position: relative; display: inline-flex; align-items: flex-end; margin-bottom: 18px; }
-    .nova-footer-lockup img { display: block; width: 150px; height: auto; margin: 0; }
-    .nova-footer-ball { position: absolute; right: -9px; bottom: 0; width: 9px; height: 9px; border-radius: 50%; background: #e8552d; transform-origin: center bottom; animation: nova-dot-bounce 3.5s ease-in-out infinite; }
-    @keyframes nova-dot-bounce {
-      0%, 42%, 100% { transform: translateY(0) scale(1); }
-      5% { transform: translateY(-14px) scale(.94, 1.08); }
-      12% { transform: translateY(0) scale(1.08, .9); }
-      20% { transform: translateY(-8px) scale(.96, 1.04); }
-      27% { transform: translateY(0) scale(1.05, .94); }
-      35% { transform: translateY(-3px) scale(.98, 1.02); }
-      42% { transform: translateY(0) scale(1); }
-    }
+    .nova-footer-lockup { display: inline-flex; }
     .nova-footer-discover { display: flex; flex-direction: column; }
-    .nova-footer-discover .nova-footer-heading span { color: #e8552d; }
+    .nova-footer-discover .nova-footer-heading span { color: var(--accent); }
     .nova-footer-connected { margin-top: auto; padding-top: 30px; }
     .nova-footer-legal, .nova-footer-socials { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
     .nova-footer-legal span, .nova-footer-legal button { padding: 0; border: 0; background: none; color: rgba(244, 240, 235, .68); font: inherit; font-size: 12px; line-height: inherit; cursor: default; }
     .nova-footer-legal button { cursor: pointer; }
-    .nova-footer-legal button:hover { color: #e8552d; }
+    .nova-footer-legal button:hover { color: var(--accent); }
     .nova-footer-socials { gap: 12px; }
     .nova-footer-socials span, .nova-footer-socials a { display: inline-flex; width: 20px; height: 20px; align-items: center; justify-content: center; color: rgba(244, 240, 235, .72); transition: color .18s ease; }
     .nova-footer-socials a { text-decoration: none; }
-    .nova-footer-socials span:hover, .nova-footer-socials a:hover, .nova-footer-socials a:focus-visible { color: #e8552d; }
-    .nova-footer-socials a:focus-visible { outline: 2px solid #e8552d; outline-offset: 4px; }
+    .nova-footer-socials span:hover, .nova-footer-socials a:hover, .nova-footer-socials a:focus-visible { color: var(--accent); }
+    .nova-footer-socials a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
     .nova-footer-socials svg { display: block; width: 18px; height: 18px; fill: currentColor; }
     .nova-footer-socials .nova-alibaba-icon { width: 22px; height: 22px; }
     .cc { left: 50%; bottom: 24px; width: min(520px, calc(100% - 32px)); padding: 24px; border: 0; border-radius: 18px; background: rgba(31, 31, 31, .65); box-shadow: 0 16px 54px rgba(0, 0, 0, .4); text-shadow: none; -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); -webkit-mask: none; mask: none; }
     .cc::before, .cc::after { display: none; }
     .cc p { color: rgba(244, 240, 235, .78); }
     .cc button { border-color: rgba(244, 240, 235, .4); }
-    .cc button.primary { border-color: #e8552d; background: #e8552d; color: #1f1f1f; }
-    .cc button:focus-visible, .cc input:focus-visible, .nova-footer-legal button:focus-visible { outline: 2px solid #e8552d; outline-offset: 3px; }
+    .cc button.primary { border-color: var(--accent); background: var(--accent); color: #1f1f1f; }
+    .cc button:focus-visible, .cc input:focus-visible, .nova-footer-legal button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     #cc-reopen { position: static; z-index: auto; padding: 0; border: 0; border-radius: 0; background: none; color: rgba(244, 240, 235, .68); font-family: inherit; font-size: 12px; font-weight: inherit; line-height: inherit; }
-    #cc-reopen:hover { color: #e8552d; }
+    #cc-reopen:hover { color: var(--accent); }
     @media (max-width: 760px) {
       .nova-header { min-height: 48px; padding: 8px 24px; }
-      .nova-brand img { width: 84px; }
-      .nova-brand-dot { width: 8px; height: 8px; }
+      .nova-brand .nova-wordmark { width: 84px; }
       .nova-header-nav { gap: 18px; }
       .nova-hero { min-height: calc(100vh - 48px); min-height: calc(100svh - 48px); }
       .nova-footer { padding: 48px 24px 64px; }
@@ -178,7 +172,8 @@
       .nova-footer-bottom { grid-template-columns: 1fr; gap: 16px; }
       .nova-footer-legal { gap: 10px 14px; }
     }
-    @media (prefers-reduced-motion: reduce) { .nova-footer-ball { animation: none; } }
+    .nova-footer-bottom p, .nova-footer-legal { font-family: var(--font-mono); }
+    .cc h2 { font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: .02em; }
 
     /* =========================================================
        FROSTED GLASS EFFECT (uses the settings at the top)
@@ -230,13 +225,12 @@
 <body>
   <header class="nova-header">
     <a class="nova-brand" href="./" aria-label="NOVA home">
-      <img src="./logo.png" alt="NOVA">
-      <span class="nova-brand-dot" aria-hidden="true"></span>
+      <svg class="nova-wordmark" viewBox="0 -4 714 208" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M0 0H48L130 134.4V0H170V200H122L40 65.6V200H0Z M190 100a106 106 0 1 0 212 0a106 106 0 1 0-212 0Z M230 100a66 66 0 1 0 132 0a66 66 0 1 0-132 0Z M390 0H435L490 112.2L545 0H590L490 204Z M714 200H669L614 87.8L559 200H514L614-4Z"/></svg>
     </a>
     <nav class="nova-header-nav" aria-label="Main navigation">
       <a href="./">Home</a>
       <a href="https://novaporto.eu">Log in</a>
-      <a href="./about">About</a>
+      <a href="./about.html">About</a>
     </nav>
   </header>
   <main class="nova-hero">
@@ -383,8 +377,7 @@
       <div class="nova-footer-grid">
         <div class="nova-footer-brand">
           <div class="nova-footer-lockup" aria-label="NOVA">
-            <img src="./logo.png" alt="NOVA">
-            <span class="nova-footer-ball" aria-hidden="true"></span>
+            <svg class="nova-wordmark" viewBox="0 -4 714 208" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M0 0H48L130 134.4V0H170V200H122L40 65.6V200H0Z M190 100a106 106 0 1 0 212 0a106 106 0 1 0-212 0Z M230 100a66 66 0 1 0 132 0a66 66 0 1 0-132 0Z M390 0H435L490 112.2L545 0H590L490 204Z M714 200H669L614 87.8L559 200H514L614-4Z"/></svg>
           </div>
           <p>A space where you can meet new customers.</p>
         </div>
