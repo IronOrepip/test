@@ -1,0 +1,39 @@
+{
+  "name": "nova-shop",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "NOVA website and shop (novaporto.eu). Static pages built from templates, API on a Cloudflare Worker.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/design-check.mjs",
+    "test": "node --test --test-concurrency=1 --test-force-exit --test-timeout=60000 \"tests/*.test.mjs\"",
+    "dev": "node scripts/dev.mjs",
+    "seed": "node scripts/seed.mjs",
+    "assets": "node scripts/assets.mjs",
+    "email:preview": "node scripts/email-preview.mjs",
+    "walk": "node scripts/walk.mjs",
+    "deploy:staging": "npm run build && wrangler deploy --env staging",
+    "bundle:check": "wrangler deploy --dry-run --outdir .wrangler/dry-run"
+  },
+  "devDependencies": {
+    "@fontsource/barlow": "^5.0.0",
+    "@fontsource/barlow-condensed": "^5.0.0",
+    "@fontsource/ibm-plex-mono": "^5.0.0",
+    "embedded-postgres": "latest",
+    "pg": "^8.13.0",
+    "playwright": "^1.48.0",
+    "sharp": "^0.33.5",
+    "wrangler": "^4.0.0"
+  },
+  "allowScripts": {
+    "sharp@0.35.5": true,
+    "sharp@0.33.5": true,
+    "@embedded-postgres/windows-x64@18.6.0-beta.19": true,
+    "esbuild@0.28.2": true,
+    "workerd@1.20261110.1": true
+  }
+}

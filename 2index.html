@@ -1,0 +1,1176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-KTDL2RB7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <title>NOVA | Sourcing, websites and IT for businesses in Europe</title>
+  <meta name="description" content="NOVA is a B2B partner for businesses across Europe: product sourcing and supply, website design, and website and IT management. Request a quote.">
+  <link rel="canonical" href="https://novaporto.eu/">
+  <meta name="theme-color" content="#1f1f1f">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NOVA">
+  <meta property="og:title" content="NOVA | Sourcing, websites and IT for businesses in Europe">
+  <meta property="og:description" content="NOVA is a B2B partner for businesses across Europe: product sourcing and supply, website design, and website and IT management. Request a quote.">
+  <meta property="og:url" content="https://novaporto.eu/">
+  <meta property="og:image" content="https://novaporto.eu/social-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="NOVA. One partner for the products and the tech your business runs on.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NOVA | Sourcing, websites and IT for businesses in Europe">
+  <meta name="twitter:description" content="NOVA is a B2B partner for businesses across Europe: product sourcing and supply, website design, and website and IT management. Request a quote.">
+  <meta name="twitter:image" content="https://novaporto.eu/social-share.png">
+  <meta name="twitter:image:alt" content="NOVA. One partner for the products and the tech your business runs on.">
+  <link rel="icon" type="image/png" sizes="512x512" href="./favicon-512.png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://novaporto.eu/#org",
+          "name": "NOVA",
+          "url": "https://novaporto.eu",
+          "logo": "https://novaporto.eu/logo.png",
+          "foundingDate": "2026-10",
+          "description": "NOVA is a B2B partner for businesses across Europe: product sourcing and supply, website design, and website and IT management.",
+          "areaServed": "Europe",
+          "sameAs": ["https://www.linkedin.com/company/novaporto/", "https://x.com/novaportoeu"]
+        },
+        { "@type": "WebSite", "name": "NOVA", "url": "https://novaporto.eu/", "publisher": { "@id": "https://novaporto.eu/#org" } }
+      ]
+    }
+  </script>
+  <link rel="preload" as="image" href="./n.png">
+
+  <style>
+    /* =========================================================
+       DESIGN TOKENS (see DESIGN.md)
+       ========================================================= */
+    :root {
+      --ink: #1f1f1f;
+      --ink-2: #262524;
+      --line: rgba(244, 240, 235, .16);
+      --cream: #f4f0eb;
+      --cream-2: rgba(244, 240, 235, .80);
+      --cream-3: rgba(244, 240, 235, .64);
+      --accent: #f2500f;
+      --accent-soft: rgba(242, 80, 15, .16);
+      --ok: #5fbf8a;
+      --warn: #f9d042;
+
+      --font: "Barlow", Arial, sans-serif;
+      --font-ui: "Barlow", Arial, sans-serif;
+      --font-display: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+      --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+      --fs-hero: clamp(84px, 19vw, 240px);
+      --fs-h2: clamp(32px, 5vw, 56px);
+      --fs-h3: 20px;
+      --fs-lead: clamp(18px, 2vw, 22px);
+      --fs-body: 16px;
+      --fs-small: 13px;
+
+      --wrap: 1120px;
+      --gutter: 24px;
+      --section: clamp(72px, 10vw, 128px);
+      --r-btn: 10px;
+      --r-card: 18px;
+    }
+    @media (max-width: 480px) { :root { --gutter: 18px; } }
+
+    /* =========================================================
+       FROSTED GLASS SETTINGS (header + footer), unchanged
+       ========================================================= */
+    :root {
+      --glass-tint: 31, 31, 31;
+      --glass-header-opacity: 0.12;
+      --glass-footer-opacity: 0.05;
+      --glass-blur: 10px;
+      --glass-saturate: 1.5;
+      --glass-brightness: 0.95;
+      --glass-fade: 32px;
+      --glass-cookie-opacity: 0.4;
+      --glass-cookie-fade: var(--glass-fade);
+    }
+
+    html, body { margin: 0; min-height: 100%; background: var(--ink); }
+    html { scroll-behavior: smooth; }
+    body { overflow-x: hidden; color: var(--cream); font: var(--fs-body)/1.7 var(--font); -webkit-font-smoothing: antialiased; }
+    *, *::before, *::after { box-sizing: border-box; }
+    img { max-width: 100%; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .skip { position: absolute; left: 12px; top: -60px; z-index: 50; padding: 10px 14px; border-radius: var(--r-btn); background: var(--accent); color: var(--ink); font-weight: 700; text-decoration: none; }
+    .skip:focus { top: 12px; }
+
+    /* ---------- Header (live site, "Log in" removed, quote pill added) ---------- */
+    .nova-header { position: sticky; top: 0; z-index: 20; isolation: isolate; color: var(--cream); font: 14px/1.5 var(--font-ui); }
+    .nova-header-main { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; min-height: 53px; padding: 10px max(var(--gutter), calc((100% - var(--wrap)) / 2)); }
+    .nova-brand { display: inline-flex; align-items: center; gap: 2px; }
+    .nova-wordmark { display: block; width: 100px; height: auto; color: #f4f5f6; }
+    .nova-header-nav { display: flex; align-items: center; gap: 24px; }
+    .nova-header-nav a { color: rgba(244, 240, 235, .82); font-weight: 600; text-decoration: none; transition: color .18s ease, background-color .18s ease, border-color .18s ease; }
+    .nova-header-nav a:hover, .nova-header-nav a:focus-visible { color: var(--accent); }
+    .nova-header-nav a[aria-current="page"] { color: var(--cream); }
+    .nova-header-nav a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .nova-header-nav .nav-quote { padding: 7px 14px; border: 1.5px solid rgba(244, 240, 235, .4); border-radius: 999px; color: var(--cream); }
+    .nova-header-nav .nav-quote:hover, .nova-header-nav .nav-quote:focus-visible { border-color: var(--accent); background: var(--accent); color: var(--ink); }
+
+    .nova-header::after, .nova-footer::after, .nova-header::before, .nova-footer::before { content: ""; position: absolute; left: 0; right: 0; pointer-events: none; }
+    .nova-header::after, .nova-footer::after { z-index: -2;
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) brightness(var(--glass-brightness));
+      backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) brightness(var(--glass-brightness)); }
+    .nova-header::after { top: 0; bottom: calc(var(--glass-fade) * -1); background: rgba(var(--glass-tint), var(--glass-header-opacity));
+      -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - var(--glass-fade)), transparent);
+      mask-image: linear-gradient(to bottom, #000 calc(100% - var(--glass-fade)), transparent); }
+    .nova-footer::after { bottom: 0; top: calc(var(--glass-fade) * -1); background: rgba(var(--glass-tint), var(--glass-footer-opacity));
+      -webkit-mask-image: linear-gradient(to top, #000 calc(100% - var(--glass-fade)), transparent);
+      mask-image: linear-gradient(to top, #000 calc(100% - var(--glass-fade)), transparent); }
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+      .nova-header::after, .nova-footer::after { background: rgba(var(--glass-tint), 0.92); }
+    }
+
+    /* ---------- Animated background (live site) ---------- */
+    :root { --anim-warmth: 0.6; --anim-brightness: 0.8; }
+    #bg { position: fixed; inset: 0; z-index: 0; width: 100%; height: 100%; display: block;
+      filter: sepia(var(--anim-warmth)) saturate(1.4) brightness(var(--anim-brightness)); }
+    :root {
+      --shape-pink: #ff4f87; --shape-teal: #4acfda; --shape-yellow: #f9d042;
+      --shape-red: #eb1f14; --shape-orange: #ff5c1a; --shape-amber: #ff9e38;
+      --bokeh-opacity: 0.55; --bokeh-blur: 6px;
+      --shape-opacity: 0.55; --shape-blur: 28px;
+      --shape-line: #f4f0eb; --shape-line-opacity: 0.18; --shape-line-blur: 1px;
+      --shape-speed: 1;
+    }
+    .shapes { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+    .shape { position: absolute; will-change: transform; animation: shape-drift 40s ease-in-out infinite alternate; }
+    .shape svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    .shape-fill { opacity: var(--shape-opacity); filter: blur(var(--shape-blur)); }
+    .shape-line { stroke: var(--shape-line); stroke-width: 1.4; opacity: var(--shape-line-opacity); filter: blur(var(--shape-line-blur)); }
+    .shape-line path { vector-effect: non-scaling-stroke; }
+    @keyframes shape-drift {
+      0%   { transform: translate(0, 0) rotate(0deg) scale(1); }
+      50%  { transform: translate(var(--dx), calc(var(--dy) * -0.6)) rotate(calc(var(--r) * 0.5)) scale(var(--s)); }
+      100% { transform: translate(calc(var(--dx) * -0.4), var(--dy)) rotate(var(--r)) scale(1); }
+    }
+    .shape-1 { left: -8%; top: -10%; width: 32vmax; height: 26vmax; --dx: 5.0vmax; --dy: -2.1vmax; --r: -16deg; --s: 0.95; animation-duration: calc(38s * var(--shape-speed)); }
+    .shape-2 { left: 36%; top: -12%; width: 28vmax; height: 18vmax; --dx: -4.6vmax; --dy: -3.9vmax; --r: -1deg; --s: 0.99; animation-duration: calc(30s * var(--shape-speed)); animation-delay: -19s; }
+    .shape-3 { left: 78%; top: -8%; width: 30vmax; height: 34vmax; --dx: 3.6vmax; --dy: -2.5vmax; --r: -8deg; --s: 1.09; animation-duration: calc(47s * var(--shape-speed)); animation-delay: -22s; }
+    .shape-4 { left: -9%; top: 40%; width: 18vmax; height: 40vmax; --dx: -2.2vmax; --dy: 3.2vmax; --r: 0deg; --s: 0.97; animation-duration: calc(45s * var(--shape-speed)); animation-delay: -15s; }
+    .shape-5 { left: 30%; top: 86%; width: 36vmax; height: 22vmax; --dx: -3.0vmax; --dy: 3.3vmax; --r: -3deg; --s: 1.01; animation-duration: calc(49s * var(--shape-speed)); animation-delay: -11s; }
+    .shape-6 { left: 82%; top: 70%; width: 22vmax; height: 34vmax; --dx: 3.1vmax; --dy: 3.4vmax; --r: -8deg; --s: 1.04; animation-duration: calc(39s * var(--shape-speed)); animation-delay: -21s; }
+    .bokeh { position: absolute; border-radius: 50%; opacity: var(--bokeh-opacity); filter: blur(var(--bokeh-blur)); will-change: transform;
+      background: radial-gradient(circle at 40% 40%, color-mix(in srgb, var(--c) 60%, #fff) 0%, var(--c) 45%, transparent 72%);
+      animation: shape-drift 40s ease-in-out infinite alternate; }
+    .bokeh-1 { --c: var(--shape-pink); left: 22%; top: 12%; width: 7vmax; height: 7vmax; --dx: 1.5vmax; --dy: 2.9vmax; --r: 0deg; --s: 1.13; animation-duration: calc(48s * var(--shape-speed)); animation-delay: -29s; }
+    .bokeh-2 { --c: var(--shape-yellow); left: 70%; top: 22%; width: 5vmax; height: 5vmax; --dx: 0.4vmax; --dy: 4.1vmax; --r: 0deg; --s: 1.12; animation-duration: calc(35s * var(--shape-speed)); animation-delay: -20s; }
+    .bokeh-3 { --c: var(--shape-teal); left: 10%; top: 58%; width: 9vmax; height: 9vmax; --dx: -5.4vmax; --dy: -4.1vmax; --r: 0deg; --s: 0.98; animation-duration: calc(35s * var(--shape-speed)); animation-delay: -12s; }
+    .bokeh-4 { --c: var(--shape-red); left: 90%; top: 40%; width: 6vmax; height: 6vmax; --dx: 0.5vmax; --dy: 0.9vmax; --r: 0deg; --s: 0.85; animation-duration: calc(34s * var(--shape-speed)); animation-delay: -13s; }
+    .bokeh-5 { --c: var(--shape-amber); left: 60%; top: 78%; width: 8vmax; height: 8vmax; --dx: -2.6vmax; --dy: 5.0vmax; --r: 0deg; --s: 1.12; animation-duration: calc(33s * var(--shape-speed)); animation-delay: -24s; }
+    .bokeh-6 { --c: var(--shape-teal); left: 38%; top: 92%; width: 5vmax; height: 5vmax; --dx: 3.6vmax; --dy: -4.3vmax; --r: 0deg; --s: 1.07; animation-duration: calc(32s * var(--shape-speed)); animation-delay: -4s; }
+    .bokeh-7 { --c: var(--shape-pink); left: 84%; top: 92%; width: 10vmax; height: 10vmax; --dx: -6.0vmax; --dy: 4.5vmax; --r: 0deg; --s: 0.92; animation-duration: calc(34s * var(--shape-speed)); animation-delay: -30s; }
+
+    /* Veil: darkens the background as you scroll past the hero, so body text keeps AA contrast */
+    .veil { position: fixed; inset: 0; z-index: 1; pointer-events: none; background: rgb(22, 21, 20); opacity: var(--veil, .3); transition: opacity .2s linear; }
+
+    /* =========================================================
+       PAGE LAYOUT
+       ========================================================= */
+    main, .nova-footer { position: relative; z-index: 2; }
+    .wrap { width: min(var(--wrap), 100% - var(--gutter) * 2); margin-inline: auto; }
+    .section { padding-block: var(--section); }
+    .eyebrow { margin: 0 0 14px; color: var(--accent); font-size: var(--fs-small); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .h2 { margin: 0; font: 600 var(--fs-h2)/1.08 var(--font-display); letter-spacing: .02em; text-transform: uppercase; text-wrap: balance; }
+    .lead { max-width: 62ch; margin: 18px 0 0; color: var(--cream-2); font-size: var(--fs-lead); line-height: 1.55; }
+    .section-head { display: grid; grid-template-columns: 1fr minmax(0, 420px); align-items: end; gap: 24px 48px; margin-bottom: 48px; }
+    .section-head .lead { margin: 0; font-size: 18px; }
+    @media (max-width: 860px) { .section-head { grid-template-columns: 1fr; } }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 22px; border: 1.5px solid transparent; border-radius: var(--r-btn); font: 600 15px/1 var(--font); text-decoration: none; cursor: pointer; transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease; }
+    .btn svg { width: 18px; height: 18px; transition: transform .2s ease; }
+    .btn:hover svg { transform: translateX(3px); }
+    .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .btn-primary { background: var(--accent); color: var(--ink); }
+    .btn-primary:hover { background: var(--cream); color: var(--ink); }
+    .btn-ghost { border-color: rgba(244, 240, 235, .4); background: transparent; color: var(--cream); }
+    .btn-ghost:hover { border-color: var(--accent); background: var(--accent); color: var(--ink); }
+    .btn-ink { background: var(--ink); color: var(--cream); }
+    .btn-ink:hover { background: var(--cream); color: var(--ink); }
+    .btn-ink:focus-visible { outline-color: var(--ink); }
+
+    /* Reveal on scroll (only when JS runs, so the page never hides content without it) */
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: calc(var(--i, 0) * 80ms); }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    /* Shared image frame */
+    .frame { position: relative; overflow: hidden; border-radius: var(--r-card); background: var(--ink-2); }
+    .frame img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+
+    /* ---------- 1. Announcement bar ---------- */
+    .announce { position: relative; z-index: 1; display: flex; align-items: center; height: 40px; overflow: hidden; padding-inline: max(var(--gutter), calc((100% - var(--wrap)) / 2)); background: transparent; color: var(--accent); font: 700 12px/1 var(--font); letter-spacing: .12em; text-transform: uppercase; }
+    .announce-track { display: flex; flex: 1; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, #000 32px, #000 calc(100% - 32px), transparent); mask-image: linear-gradient(to right, transparent, #000 32px, #000 calc(100% - 32px), transparent); }
+    .announce-run { display: flex; flex-shrink: 0; gap: 0; animation: marquee 38s linear infinite; }
+    .announce-run span { padding-right: 3em; white-space: nowrap; }
+    .announce:hover .announce-run, .announce:focus-within .announce-run { animation-play-state: paused; }
+    @keyframes marquee { to { transform: translateX(-100%); } }
+
+    /* ---------- 2. Hero ---------- */
+    .hero { position: relative; display: grid; align-items: end; min-height: calc(80vh - 53px); min-height: calc(80svh - 53px); padding: 64px 0 56px; overflow: hidden; isolation: isolate; }
+    .hero-media { position: absolute; inset: 0; z-index: -2; opacity: 0; transition: opacity 1.2s ease; }
+    .hero-media.ready { opacity: 1; }
+    .hero-media video, .hero-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-media::after { content: ""; position: absolute; inset: 0; background: rgba(15, 14, 13, .55); }
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(120% 80% at 20% 90%, rgba(18, 17, 16, .75), transparent 70%); }
+    .hero-inner { position: relative; }
+    .hero-label { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 8px; color: var(--cream); font-size: var(--fs-small); font-weight: 700; letter-spacing: .12em; }
+    .hero-label::before { content: ""; width: 28px; height: 1.5px; background: var(--accent); }
+    .hero-title { display: flex; align-items: flex-end; margin: 0; font: 600 var(--fs-hero)/.82 var(--font-display); letter-spacing: .01em; text-transform: uppercase; text-shadow: 0 6px 40px rgba(0, 0, 0, .35); }
+    .hero-title .ch { display: inline-block; }
+    .js .hero-title .ch { transform: translateY(105%); opacity: 0; animation: rise .9s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--i) * 70ms + 150ms); }
+    .hero-title-mask { display: inline-flex; overflow: hidden; padding-bottom: .04em; }
+    .hero-dot { flex-shrink: 0; width: .13em; height: .13em; margin: 0 0 .085em .05em; border-radius: 50%; background: var(--accent); transform-origin: center bottom; animation: nova-dot-bounce 3.5s ease-in-out 1.2s infinite; }
+    @keyframes rise { to { transform: none; opacity: 1; } }
+    .hero-tagline { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 28px 0 0; padding: 0; list-style: none; color: var(--cream); font-size: clamp(12px, 1.3vw, 14px); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-shadow: 0 1px 12px rgba(0, 0, 0, .5); }
+    .hero-tagline li + li::before { content: "•"; margin-right: 14px; color: var(--accent); }
+    @media (max-width: 600px) {
+      .hero-tagline { display: grid; gap: 8px; }
+      .hero-tagline li::before, .hero-tagline li + li::before { content: "•"; margin-right: 10px; color: var(--accent); }
+    }
+    .hero-bottom { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+    .hero-slogan { max-width: 22ch; margin: 0; font-size: clamp(24px, 3.2vw, 38px); line-height: 1.12; font-weight: 700; letter-spacing: -0.02em; text-shadow: 0 2px 20px rgba(0, 0, 0, .5); }
+    .hero-slogan em { font-style: normal; color: var(--accent); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* ---------- Marquee strip (TRYP-style ticker of the business lines) ---------- */
+    .ticker { position: relative; z-index: 2; overflow: hidden; padding: 22px 0; background: rgba(22, 21, 20, .28); }
+    .ticker-run { display: flex; width: max-content; animation: marquee 60s linear infinite; }
+    .ticker-run span { display: inline-flex; align-items: center; gap: 36px; padding-right: 36px; font-size: clamp(28px, 4.5vw, 54px); line-height: 1; font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; }
+    .ticker-run span:nth-child(even) { color: rgba(244, 240, 235, .5); }
+    .ticker-run span::after { content: ""; width: .28em; height: .28em; border-radius: 50%; background: var(--accent); }
+
+    /* ---------- 3. Welcome ---------- */
+    .welcome { text-align: center; }
+    .welcome .h2 { margin-bottom: 28px; }
+    .welcome-body { max-width: 720px; margin-inline: auto; }
+    .welcome-body p { margin: 0 0 18px; color: var(--cream-2); font-size: var(--fs-lead); line-height: 1.6; }
+    .welcome-body p:first-child { color: var(--cream); }
+    .welcome-body strong { color: var(--cream); font-weight: 700; }
+    .welcome-facts { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: 32px 0 0; padding: 0; list-style: none; }
+    .welcome-facts li { padding: 8px 14px; border: 0; border-radius: 999px; background: rgba(31, 31, 31, .3); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); color: var(--cream-2); font-size: 14px; font-weight: 600; }
+    .welcome-facts b { color: var(--cream); font-weight: 700; }
+
+    /* ---------- 4. What we supply (cards) ---------- */
+    .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin: 0; padding: 0; list-style: none; }
+    @media (max-width: 1024px) { .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) { .cards { grid-template-columns: 1fr; } }
+    .card { position: relative; display: flex; flex-direction: column; overflow: hidden; border: 0; border-radius: var(--r-card); background: rgba(31, 31, 31, .34); -webkit-backdrop-filter: blur(20px) saturate(1.2); backdrop-filter: blur(20px) saturate(1.2); transition: background-color .3s ease, transform .35s cubic-bezier(.2,.7,.2,1); }
+    .card:hover { background: rgba(31, 31, 31, .5); transform: translateY(-4px); }
+    .card:hover .frame img { transform: scale(1.05); }
+    .card .frame { aspect-ratio: 4 / 3; border-radius: 0; }
+    .card-body { display: flex; flex: 1; flex-direction: column; padding: 20px 20px 24px; }
+    .card-num { margin: 0 0 10px; color: var(--accent); font-size: var(--fs-small); font-weight: 700; letter-spacing: .12em; }
+    .card h3 { margin: 0 0 10px; font-size: var(--fs-h3); line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; }
+    .card p { margin: 0; color: var(--cream-2); font-size: 15px; line-height: 1.55; }
+
+    /* ---------- 5. How we work (manifesto, alternating) ---------- */
+    .values { display: grid; gap: clamp(48px, 7vw, 96px); margin-top: 64px; }
+    .value { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: clamp(28px, 5vw, 72px); }
+    .value:nth-child(even) .frame { order: 2; }
+    .value .frame { aspect-ratio: 4 / 3; }
+    .value-num { display: block; margin-bottom: 12px; color: var(--accent); font-size: clamp(40px, 5vw, 64px); line-height: 1; font-weight: 700; letter-spacing: -0.03em; }
+    .value h3 { margin: 0 0 14px; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; }
+    .value p { max-width: 46ch; margin: 0; color: var(--cream-2); font-size: 17px; line-height: 1.6; }
+    .value-text { padding: 8px 0; }
+    @media (max-width: 760px) {
+      .value { grid-template-columns: 1fr; }
+      .value:nth-child(even) .frame { order: 0; }
+    }
+
+    /* ---------- 6. From your request to your door (steps; swappable for stats) ---------- */
+    .steps-panel { padding: clamp(28px, 5vw, 56px); border: 0; border-radius: 24px; background: rgba(31, 31, 31, .34); -webkit-backdrop-filter: blur(24px) saturate(1.2); backdrop-filter: blur(24px) saturate(1.2); }
+    /* .kpis: same 4-column grid. When there are real numbers, replace each <li class="step"> with
+       <li class="kpi"><span class="kpi-num">120</span><span class="kpi-label">orders delivered</span></li> */
+    .steps, .kpis { position: relative; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin: 48px 0 0; padding: 0; list-style: none; counter-reset: step; }
+    .steps::before { content: ""; position: absolute; left: 28px; right: 28px; top: 28px; height: 1.5px; background: linear-gradient(to right, var(--accent), rgba(242, 80, 15, .2)); transform-origin: left; transform: scaleX(var(--draw, 1)); transition: transform 1.4s cubic-bezier(.2,.7,.2,1) .2s; }
+    .js .steps:not(.in) { --draw: 0; }
+    .step { position: relative; counter-increment: step; }
+    .step-icon { position: relative; display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 22px; border: 1.5px solid var(--accent); border-radius: 50%; background: var(--ink); color: var(--cream); }
+    .step-icon svg { width: 24px; height: 24px; }
+    .step-icon::after { content: counter(step); position: absolute; top: -6px; right: -8px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: var(--ink); font-size: 12px; font-weight: 700; }
+    .step h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.25; font-weight: 700; }
+    .step p { margin: 0; color: var(--cream-2); font-size: 15px; line-height: 1.55; }
+    .kpi-num { display: block; font-size: clamp(44px, 5vw, 64px); line-height: 1; font-weight: 700; }
+    .kpi-label { color: var(--cream-2); }
+    .steps-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; margin-top: 48px; padding-top: 0; }
+    .steps-foot p { margin: 0; color: var(--cream-2); font-size: 17px; }
+    @media (max-width: 860px) {
+      .steps, .kpis { grid-template-columns: 1fr 1fr; }
+      .steps::before { display: none; }
+    }
+    @media (max-width: 560px) {
+      .steps, .kpis { grid-template-columns: 1fr; gap: 28px; }
+      .step { display: grid; grid-template-columns: 56px 1fr; gap: 0 18px; }
+      .step-icon { margin: 0; grid-row: span 2; }
+    }
+
+    /* ---------- 6b. Coming in 2027 (data-driven) ---------- */
+    .soon[hidden] { display: none; }
+    .cards-soon { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    @media (max-width: 1024px) { .cards-soon { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 600px) { .cards-soon { grid-template-columns: 1fr; } }
+    .cards-soon .card-body { padding: 16px 16px 18px; }
+    .cards-soon h3 { font-size: 16px; }
+    .cards-soon p { font-size: 14px; }
+    .tag { position: absolute; top: 12px; left: 12px; z-index: 1; padding: 6px 10px; border-radius: 999px; background: rgba(31, 31, 31, .82); color: var(--cream); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+    .tag::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 7px; border-radius: 50%; background: var(--accent); vertical-align: 1px; }
+    .card-link { margin-top: 14px; padding: 0; border: 0; background: none; color: var(--cream); font: 600 14px/1.4 var(--font); text-align: left; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 4px; cursor: pointer; }
+    .card-link:hover { color: var(--accent); }
+    .card-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+    .is-draft { outline: 2px dashed var(--warn); outline-offset: -2px; }
+    .need-flag { display: block; margin-top: 10px; color: var(--warn); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+    .draft-banner { position: fixed; left: 50%; top: 12px; z-index: 40; transform: translateX(-50%); padding: 8px 14px; border-radius: 999px; background: var(--warn); color: var(--ink); font: 700 12px/1.3 var(--font-ui); box-shadow: 0 8px 30px rgba(0,0,0,.4); }
+
+    /* ---------- 7. FAQ ---------- */
+    .faq-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 32px 64px; align-items: start; }
+    @media (max-width: 860px) { .faq-grid { grid-template-columns: 1fr; } }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-list details { border-bottom: 1px solid var(--line); }
+    .faq-list summary { position: relative; display: block; padding: 22px 48px 22px 0; font-size: 19px; line-height: 1.35; font-weight: 600; cursor: pointer; list-style: none; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::before, .faq-list summary::after { content: ""; position: absolute; right: 8px; top: 50%; width: 16px; height: 2px; background: var(--accent); transition: transform .3s ease; }
+    .faq-list summary::after { transform: rotate(90deg); }
+    .faq-list details[open] summary::after { transform: rotate(0deg); }
+    .faq-list summary:hover { color: var(--accent); }
+    .faq-list summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
+    .faq-list .answer { padding: 0 48px 24px 0; color: var(--cream-2); font-size: 17px; }
+    .faq-list .answer p { margin: 0; }
+    .faq-aside p { margin: 18px 0 24px; color: var(--cream-2); font-size: 17px; }
+
+    /* ---------- 8. CTA bar ---------- */
+    .cta-bar { position: relative; z-index: 2; overflow: hidden; background: var(--accent); color: var(--ink); }
+    .cta-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; padding-block: clamp(56px, 8vw, 104px) clamp(110px, 17vw, 240px); }
+    .cta-bar h2 { max-width: 20ch; margin: 0; font-size: clamp(30px, 4.6vw, 54px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em; }
+    .cta-bar p { margin: 12px 0 0; font-size: 18px; font-weight: 600; }
+    .cta-ticker { position: absolute; left: 0; bottom: 0; z-index: 0; pointer-events: none; display: flex; width: max-content; padding-bottom: .08em; color: rgba(31, 31, 31, .08); font-size: clamp(90px, 16vw, 220px); line-height: 1.25; font-weight: 700; letter-spacing: -0.03em; white-space: nowrap; animation: marquee 50s linear infinite; }
+    .cta-inner { position: relative; z-index: 1; }
+
+
+    /* Service category chips + customer segments */
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 14px 0 0; padding: 0; list-style: none; }
+    .chips li { padding: 4px 9px; border-radius: 999px; background: rgba(244, 240, 235, .08); color: var(--cream-2); font-size: 11.5px; font-weight: 600; white-space: nowrap; }
+    .segments { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 0; padding: 0; list-style: none; }
+    @media (max-width: 860px) { .segments { grid-template-columns: 1fr; } }
+    .segment { padding: clamp(24px, 3.5vw, 40px); border-radius: var(--r-card); background: rgba(31, 31, 31, .34); -webkit-backdrop-filter: blur(20px) saturate(1.2); backdrop-filter: blur(20px) saturate(1.2); }
+    .segment-icon { display: grid; place-items: center; width: 52px; height: 52px; margin-bottom: 22px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); }
+    .segment-icon svg { width: 24px; height: 24px; }
+    .segment h3 { margin: 0 0 10px; font-size: 22px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; }
+    .segment p { margin: 0; color: var(--cream-2); font-size: 16px; line-height: 1.6; }
+
+    /* ---------- 9. Newsletter ---------- */
+    .news { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 64px; align-items: center; }
+    @media (max-width: 860px) { .news { grid-template-columns: 1fr; } }
+    .news h2 { margin: 0; font-size: clamp(28px, 3.6vw, 40px); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+    .news-copy p { margin: 12px 0 0; color: var(--cream-2); font-size: 17px; }
+    .field-row { display: flex; gap: 10px; }
+    .field-row .btn { flex-shrink: 0; white-space: nowrap; }
+    @media (max-width: 480px) { .field-row { flex-direction: column; } }
+    .input { width: 100%; min-height: 48px; padding: 0 16px; border: 1.5px solid var(--line); border-radius: var(--r-btn); background: rgba(38, 37, 36, .5); color: var(--cream); font: 16px/1.4 var(--font); }
+    textarea.input { min-height: 120px; padding: 12px 16px; resize: vertical; }
+    .input::placeholder { color: rgba(244, 240, 235, .5); }
+    .input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .field-label { display: block; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+    .consent { margin: 12px 0 0; color: var(--cream-3); font-size: var(--fs-small); }
+    .consent a { color: var(--cream-2); }
+    .form-msg { margin: 14px 0 0; font-weight: 700; }
+    .form-msg[data-state="ok"] { color: var(--ok); }
+    .form-msg[data-state="info"] { color: var(--cream-2); }
+    .form-msg a { color: var(--cream); }
+
+    /* ---------- Quote dialog ---------- */
+    .quote-dialog { width: min(560px, calc(100% - 32px)); max-height: calc(100% - 32px); padding: 0; border: 0; border-radius: 22px; background: rgba(31, 31, 31, .86); color: var(--cream); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px); font-family: var(--font); }
+    .quote-dialog::backdrop { background: rgba(10, 10, 10, .6); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+    .quote-dialog[open] { animation: pop .3s cubic-bezier(.2,.8,.2,1); }
+    @keyframes pop { from { opacity: 0; transform: translateY(16px) scale(.98); } }
+    .quote-form { display: grid; gap: 16px; padding: clamp(24px, 5vw, 36px); }
+    .quote-form h2 { margin: 0; font: 600 26px/1.15 var(--font-display); letter-spacing: .02em; text-transform: uppercase; }
+    .quote-form .sub { margin: -6px 0 4px; color: var(--cream-2); }
+    .quote-close { position: absolute; top: 14px; right: 14px; display: grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: 50%; background: rgba(244, 240, 235, .08); color: var(--cream); cursor: pointer; }
+    .quote-close:hover { background: var(--accent); color: var(--ink); }
+    .quote-close:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 480px) { .two { grid-template-columns: 1fr; } }
+
+    /* ---------- Footer (live site, duplicated About/Discover/Stay Connected block removed) ---------- */
+    .nova-footer { isolation: isolate; padding: 68px 28px 72px; color: var(--cream); font: 15px/1.6 var(--font-ui); }
+    .nova-footer-container { width: min(var(--wrap), 100%); margin: 0 auto; }
+    .nova-footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 48px; }
+    .nova-footer-brand p, .nova-footer-note { max-width: 310px; margin: 0; color: rgba(244, 240, 235, .72); }
+    .nova-footer-heading { margin: 0 0 16px; color: var(--cream); font: 600 16px/1.1 var(--font-display); letter-spacing: .02em; text-transform: uppercase; }
+    .nova-footer-links { display: grid; gap: 11px; margin: 0; padding: 0; list-style: none; }
+    .nova-footer a { color: rgba(244, 240, 235, .78); text-decoration: none; transition: color .18s ease; }
+    .nova-footer a:hover { color: var(--accent); }
+    .nova-footer a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .nova-footer address { font-style: normal; color: rgba(244, 240, 235, .72); }
+    .nova-footer-bottom { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; margin-top: 52px; padding-top: 20px; border-top: 1px solid rgba(244, 240, 235, .16); }
+    .nova-footer-bottom p { margin: 0; color: rgba(244, 240, 235, .64); font-size: 12px; }
+    .nova-footer-lockup { display: inline-flex; margin-bottom: 18px; }
+    .nova-footer-lockup .nova-wordmark { width: 150px; }
+    @keyframes nova-dot-bounce {
+      0%, 42%, 100% { transform: translateY(0) scale(1); }
+      5% { transform: translateY(-14px) scale(.94, 1.08); }
+      12% { transform: translateY(0) scale(1.08, .9); }
+      20% { transform: translateY(-8px) scale(.96, 1.04); }
+      27% { transform: translateY(0) scale(1.05, .94); }
+      35% { transform: translateY(-3px) scale(.98, 1.02); }
+      42% { transform: translateY(0) scale(1); }
+    }
+    .hero-dot { animation-name: hero-dot-bounce; }
+    @keyframes hero-dot-bounce {
+      0%, 42%, 100% { transform: translateY(0) scale(1); }
+      5% { transform: translateY(-60%) scale(.94, 1.08); }
+      12% { transform: translateY(0) scale(1.08, .9); }
+      20% { transform: translateY(-34%) scale(.96, 1.04); }
+      27% { transform: translateY(0) scale(1.05, .94); }
+      35% { transform: translateY(-12%) scale(.98, 1.02); }
+      42% { transform: translateY(0) scale(1); }
+    }
+    .nova-footer-legal, .nova-footer-socials { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
+    .nova-footer-legal span, .nova-footer-legal button { padding: 0; border: 0; background: none; color: rgba(244, 240, 235, .68); font: 400 12px/1.4 var(--font-mono); }
+    .nova-footer-legal button { cursor: pointer; }
+    .nova-footer-legal button:hover { color: var(--accent); }
+    .nova-footer-legal button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .nova-footer-socials { gap: 12px; }
+    .nova-footer-socials span, .nova-footer-socials a { display: inline-flex; width: 24px; height: 24px; align-items: center; justify-content: center; color: rgba(244, 240, 235, .72); }
+    .nova-footer-socials a:hover, .nova-footer-socials a:focus-visible { color: var(--accent); }
+    .nova-footer-socials svg { display: block; width: 18px; height: 18px; fill: currentColor; }
+    .nova-footer-socials .nova-alibaba-icon { width: 22px; height: 22px; }
+    @media (max-width: 760px) {
+      .nova-header-main { min-height: 48px; padding: 8px var(--gutter); }
+      .nova-brand .nova-wordmark { width: 84px; }
+      .nova-header-nav { gap: 18px; }
+      .nova-footer { padding: 48px 24px 64px; }
+      .nova-footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+      .nova-footer-brand { grid-column: 1 / -1; }
+      .nova-footer-bottom { margin-top: 36px; }
+    }
+    @media (max-width: 480px) {
+      .nova-header-nav { gap: 14px; }
+      .nova-header-nav a { font-size: 13px; }
+      .nova-header-nav .nav-quote { padding: 6px 11px; }
+      .nova-footer-grid { grid-template-columns: 1fr; gap: 28px; }
+      .nova-footer-brand { grid-column: auto; }
+      .nova-footer-bottom { grid-template-columns: 1fr; gap: 16px; }
+    }
+
+    /* ---------- Cookie box (live site, final effective styles) ---------- */
+    .cc { position: fixed; z-index: 30; left: 50%; bottom: 24px; transform: translateX(-50%); width: min(520px, calc(100% - 32px)); isolation: isolate; overflow: visible;
+      padding: calc(24px + var(--glass-cookie-fade)); color: var(--cream); font: 15px/1.5 var(--font-ui); }
+    .cc::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background: rgba(var(--glass-tint), var(--glass-cookie-opacity));
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) brightness(var(--glass-brightness));
+      backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturate)) brightness(var(--glass-brightness));
+      -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--glass-cookie-fade), #000 calc(100% - var(--glass-cookie-fade)), transparent), linear-gradient(to bottom, transparent, #000 var(--glass-cookie-fade), #000 calc(100% - var(--glass-cookie-fade)), transparent);
+      -webkit-mask-composite: source-in;
+      mask-image: linear-gradient(to right, transparent, #000 var(--glass-cookie-fade), #000 calc(100% - var(--glass-cookie-fade)), transparent), linear-gradient(to bottom, transparent, #000 var(--glass-cookie-fade), #000 calc(100% - var(--glass-cookie-fade)), transparent);
+      mask-composite: intersect; }
+    .cc[hidden], .cc-panel[hidden] { display: none; }
+    .cc h2 { margin: 0 0 6px; font: 600 20px/1.1 var(--font-display); letter-spacing: .02em; text-transform: uppercase; }
+    .cc p { margin: 0 0 14px; color: rgba(244, 240, 235, .82); }
+    .cc-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cc button { flex: 1 1 auto; min-height: 42px; padding: 0 16px; border-radius: 10px; border: 1.5px solid rgba(244, 240, 235, .4); background: transparent; color: var(--cream); font: inherit; font-weight: 600; cursor: pointer; transition: color .18s ease, background-color .18s ease, border-color .18s ease; }
+    .cc button:hover { border-color: var(--accent); background: var(--accent); color: var(--ink); }
+    .cc button.primary { border-color: var(--accent); background: var(--accent); color: var(--ink); }
+    .cc button:focus-visible, .cc input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .cc-panel { margin: 0 0 14px; border-top: 1px solid rgba(244, 240, 235, .2); }
+    .cc-opt { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid rgba(244, 240, 235, .2); }
+    .cc-opt input { width: 20px; height: 20px; margin: 2px 0 0; accent-color: var(--accent); flex-shrink: 0; }
+    .cc-opt strong { display: block; }
+    .cc-opt span { color: #ece7e0; font-size: 14px; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .shape, .bokeh, .hero-dot, .announce-run, .ticker-run, .cta-ticker { animation: none !important; }
+      .js .reveal, .js .hero-title .ch { opacity: 1; transform: none; animation: none; transition: none; }
+      .js .steps:not(.in) { --draw: 1; }
+      .card, .frame img { transition: none; }
+    }
+  
+    /* =========================================================
+       HOMEPAGE
+       ========================================================= */
+    .home-hero { position: relative; display: grid; place-items: center; min-height: calc(100vh - 93px); min-height: calc(100svh - 93px); isolation: isolate; }
+    :root { --s: min(52vh, 96vw); }
+    .intro { text-align: center; }
+    .intro-title { max-width: 18ch; margin: 0 auto; font: 600 clamp(36px, 5.6vw, 76px)/1.02 var(--font-display); letter-spacing: .02em; text-transform: uppercase; text-wrap: balance; }
+    .intro-title em { font-style: normal; color: var(--accent); }
+    .intro .hero-actions { justify-content: center; margin-top: 32px; }
+    .intro .hero-tagline { justify-content: center; margin-top: 40px; }
+    
+    /* The glowing N from the live homepage, now inside the hero instead of fixed to the screen */
+    .n { display: block; width: calc(var(--s) * 0.339); height: auto; margin: 0;
+      filter: drop-shadow(0 0 2px rgba(255, 250, 242, 1)) drop-shadow(0 0 8px rgba(255, 246, 232, 1)) drop-shadow(0 0 20px rgba(255, 240, 220, 0.85)) drop-shadow(0 0 44px rgba(255, 236, 214, 0.6));
+      animation: glow 4.5s ease-in-out infinite; }
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 2px rgba(255, 250, 242, 1)) drop-shadow(0 0 8px rgba(255, 246, 232, 1)) drop-shadow(0 0 20px rgba(255, 240, 220, 0.85)) drop-shadow(0 0 44px rgba(255, 236, 214, 0.6)); }
+      50% { filter: drop-shadow(0 0 1px rgba(255, 250, 242, 0.6)) drop-shadow(0 0 4px rgba(255, 246, 232, 0.45)) drop-shadow(0 0 10px rgba(255, 240, 220, 0.3)) drop-shadow(0 0 22px rgba(255, 236, 214, 0.15)); }
+    }
+    .js .n { opacity: 0; transform: scale(.92); animation: n-in 1.2s cubic-bezier(.2,.8,.2,1) .1s forwards, glow 4.5s ease-in-out 1.3s infinite; }
+    @keyframes n-in { to { opacity: 1; transform: none; } }
+    .home-title { max-width: 15ch; margin: 0 auto; font: 600 clamp(40px, 6.6vw, 92px)/.98 var(--font-display); letter-spacing: .02em; text-transform: uppercase; text-wrap: balance; text-shadow: 0 4px 40px rgba(0, 0, 0, .45); }
+    .home-title .line { display: block; overflow: hidden; padding-bottom: .06em; }
+    .home-title .line > span { display: inline-block; }
+    .js .home-title .line > span { transform: translateY(105%); animation: rise .9s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--i) * 120ms + 450ms); }
+    .home-title em { font-style: normal; color: var(--accent); }
+    .home-lead { max-width: 56ch; margin: 24px auto 0; color: var(--cream); font-size: var(--fs-lead); line-height: 1.55; text-shadow: 0 1px 16px rgba(0, 0, 0, .6); }
+            .scroll-cue { position: absolute; left: 50%; bottom: 28px; transform: translateX(-50%); display: grid; place-items: center; width: 44px; height: 44px; border: 1.5px solid rgba(244, 240, 235, .35); border-radius: 50%; color: var(--cream); }
+    .scroll-cue svg { width: 18px; height: 18px; animation: cue 2.2s ease-in-out infinite; }
+    .scroll-cue:hover { border-color: var(--accent); color: var(--accent); }
+    .scroll-cue:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    @keyframes cue { 0%, 100% { transform: translateY(-3px); } 50% { transform: translateY(4px); } }
+    @media (max-width: 600px) {
+      .intro .hero-tagline { display: flex; justify-content: center; }
+      .intro .hero-tagline li::before { content: none; }
+      .intro .hero-tagline li + li::before { content: "•"; margin-right: 10px; }
+    }
+
+    .more-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; color: var(--cream); font-weight: 600; text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 5px; }
+    .more-link:hover { color: var(--accent); }
+    .more-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 2px; }
+    .more-link svg { width: 16px; height: 16px; transition: transform .2s ease; }
+    .more-link:hover svg { transform: translateX(3px); }
+
+    /* Promises: three checkable promises in one glass panel */
+    .promises { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 48px 0 0; padding: 0; list-style: none; }
+    .promise { padding: clamp(24px, 3.5vw, 40px); border-radius: var(--r-card); background: rgba(31, 31, 31, .34); -webkit-backdrop-filter: blur(20px) saturate(1.2); backdrop-filter: blur(20px) saturate(1.2); }
+    .promise .value-num { font-size: clamp(40px, 4.4vw, 56px); }
+    .promise h3 { margin: 0 0 12px; font-size: 20px; line-height: 1.25; font-weight: 700; letter-spacing: -0.01em; }
+    .promise p { margin: 0; color: var(--cream-2); font-size: 16px; line-height: 1.6; }
+    @media (max-width: 860px) {
+      .promises { grid-template-columns: 1fr; }
+    }
+
+
+    @media (prefers-reduced-motion: reduce) {
+      .js .n, .n { opacity: 1; transform: none; animation: none; }
+      .js .home-title .line > span { transform: none; animation: none; }
+      .scroll-cue svg { animation: none; }
+    }
+  </style>
+</head>
+<body class="page-home">
+  <a class="skip" href="#main">Skip to content</a>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <script>
+    document.documentElement.classList.add('js');
+    var canvas = document.getElementById('bg');
+    var gl = canvas.getContext('webgl', { alpha: false, antialias: true });
+    if (gl) {
+      var contextLost = false;
+      canvas.addEventListener('webglcontextlost', function (event) { event.preventDefault(); contextLost = true; });
+      var vertexSource = 'attribute vec2 p; varying vec2 uv; void main() { uv = p * 0.5 + 0.5; gl_Position = vec4(p, 0.0, 1.0); }';
+      var sceneSource = [
+        'precision highp float;',
+        'varying vec2 uv; uniform vec2 res; uniform float t; uniform vec2 mouse; uniform float mouseStrength;',
+        'vec2 hash2(vec2 p) { p = vec2(dot(p, vec2(127.1, 311.7)), dot(p, vec2(269.5, 183.3))); return -1.0 + 2.0 * fract(sin(p) * 43758.5453); }',
+        'float noise(vec2 p) { vec2 i = floor(p), f = fract(p), u = f * f * (3.0 - 2.0 * f);',
+        '  return mix(mix(dot(hash2(i), f), dot(hash2(i + vec2(1.0, 0.0)), f - vec2(1.0, 0.0)), u.x), mix(dot(hash2(i + vec2(0.0, 1.0)), f - vec2(0.0, 1.0)), dot(hash2(i + vec2(1.0, 1.0)), f - vec2(1.0, 1.0)), u.x), u.y); }',
+        'float fbm(vec2 p) { float v = 0.0, a = 0.5; for (int i = 0; i < 4; i++) { v += a * noise(p); p *= 2.0; a *= 0.5; } return v; }',
+        'vec3 sceneColor(vec2 point) {',
+        '  vec2 flow = point * vec2(res.x / res.y, 1.0) * 0.9; float s = t * 0.05;',
+        '  vec2 delta = flow - mouse; float radius = length(delta);',
+        '  float twist = mouseStrength * exp(-radius * radius * 18.0) * 0.28;',
+        '  flow = mouse + vec2(cos(twist) * delta.x - sin(twist) * delta.y, sin(twist) * delta.x + cos(twist) * delta.y);',
+        '  vec2 q = vec2(fbm(flow + s), fbm(flow + vec2(5.2, 1.3) - s));',
+        '  vec2 r = vec2(fbm(flow + 3.0 * q + vec2(1.7, 9.2) + s * 1.5), fbm(flow + 3.0 * q + vec2(8.3, 2.8) - s));',
+        '  float f = fbm(flow + 3.0 * r); float x = f * 2.2 + q.x * 1.3 + r.y * 0.8;',
+        '  vec3 iri = 0.5 + 0.5 * cos(6.2832 * (x + vec3(0.0, 0.18, 0.42)));',
+        '  iri = mix(iri, vec3(0.91, 0.333, 0.176), smoothstep(0.55, 0.95, iri.r) * 0.6);',
+        '  vec3 color = mix(vec3(0.122), iri * 0.85, smoothstep(-0.25, 0.45, f + 0.6 * q.y) * 0.8);',
+        '  return color;',
+        '}',
+        'void main() { gl_FragColor = vec4(sceneColor(uv), 1.0); }'
+      ].join('\n');
+      function compileShader(type, source) {
+        var shader = gl.createShader(type);
+        gl.shaderSource(shader, source); gl.compileShader(shader);
+        if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) { console.error('NOVA WebGL shader compilation failed:', gl.getShaderInfoLog(shader)); gl.deleteShader(shader); return null; }
+        return shader;
+      }
+      function createProgram(fragmentSource) {
+        var vs = compileShader(gl.VERTEX_SHADER, vertexSource), fs = compileShader(gl.FRAGMENT_SHADER, fragmentSource);
+        if (!vs || !fs) return null;
+        var program = gl.createProgram();
+        gl.attachShader(program, vs); gl.attachShader(program, fs); gl.linkProgram(program);
+        gl.deleteShader(vs); gl.deleteShader(fs);
+        if (!gl.getProgramParameter(program, gl.LINK_STATUS)) { console.error('NOVA WebGL program linking failed:', gl.getProgramInfoLog(program)); gl.deleteProgram(program); return null; }
+        return program;
+      }
+      var sceneProgram = createProgram(sceneSource);
+      if (sceneProgram) {
+        var sceneBuffer = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, sceneBuffer);
+        gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+        var sceneUniforms = {
+          res: gl.getUniformLocation(sceneProgram, 'res'), time: gl.getUniformLocation(sceneProgram, 't'),
+          mouse: gl.getUniformLocation(sceneProgram, 'mouse'), mouseStrength: gl.getUniformLocation(sceneProgram, 'mouseStrength')
+        };
+        var motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+        var still = motionPreference.matches, framePending = false;
+        var mouseTarget = [-1, -1], mouseCurrent = [-1, -1], mouseStrengthTarget = 0, mouseStrengthCurrent = 0;
+        addEventListener('pointermove', function (event) {
+          var rect = canvas.getBoundingClientRect(), x = event.clientX - rect.left, y = event.clientY - rect.top;
+          if (x < 0 || y < 0 || x > rect.width || y > rect.height) { mouseStrengthTarget = 0; return; }
+          mouseTarget = [x / rect.width * canvas.width / canvas.height * 0.9, (rect.height - y) / rect.height * 0.9];
+          mouseStrengthTarget = 1;
+        }, { passive: true });
+        addEventListener('pointerleave', function () { mouseStrengthTarget = 0; });
+        function size() {
+          var d = Math.min(window.devicePixelRatio || 1, 1.5);
+          canvas.width = Math.max(1, Math.round(innerWidth * d)); canvas.height = Math.max(1, Math.round(innerHeight * d));
+          gl.viewport(0, 0, canvas.width, canvas.height);
+        }
+        function scheduleFrame() { if (!framePending) { framePending = true; requestAnimationFrame(frame); } }
+        function frame(ms) {
+          framePending = false;
+          if (contextLost) return;
+          var animationTime = still ? 0 : ms / 1000;
+          mouseCurrent[0] += (mouseTarget[0] - mouseCurrent[0]) * 0.12;
+          mouseCurrent[1] += (mouseTarget[1] - mouseCurrent[1]) * 0.12;
+          mouseStrengthCurrent += (mouseStrengthTarget - mouseStrengthCurrent) * 0.12;
+          gl.useProgram(sceneProgram);
+          gl.bindBuffer(gl.ARRAY_BUFFER, sceneBuffer);
+          var position = gl.getAttribLocation(sceneProgram, 'p');
+          gl.enableVertexAttribArray(position);
+          gl.vertexAttribPointer(position, 2, gl.FLOAT, false, 0, 0);
+          gl.uniform2f(sceneUniforms.res, canvas.width, canvas.height);
+          gl.uniform1f(sceneUniforms.time, still ? 20.0 : 20.0 + animationTime);
+          gl.uniform2f(sceneUniforms.mouse, mouseCurrent[0], mouseCurrent[1]);
+          gl.uniform1f(sceneUniforms.mouseStrength, mouseStrengthCurrent);
+          gl.drawArrays(gl.TRIANGLES, 0, 3);
+          if (!still) scheduleFrame();
+        }
+        motionPreference.addEventListener('change', function (event) { still = event.matches; scheduleFrame(); });
+        size();
+        addEventListener('resize', size);
+        scheduleFrame();
+      }
+    }
+  </script>
+  <div class="shapes" aria-hidden="true">
+    <div class="shape shape-1">
+      <svg class="shape-fill" viewBox="0 0 200 200" preserveAspectRatio="none"><path fill="var(--shape-teal)" d="M172.3,98.3C171.2,120.7,145.4,149.3,130.5,161.5C115.7,173.7,98.1,175.1,83.4,171.5C68.6,168.0,51.2,158.8,42.1,140.2C33.0,121.6,23.7,76.1,29.0,60.0C34.4,43.8,56.2,48.8,74.2,43.3C92.2,37.8,120.7,17.6,137.1,26.7C153.4,35.9,173.4,75.8,172.3,98.3Z"><animate attributeName="d" dur="20s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M172.3,98.3C171.2,120.7,145.4,149.3,130.5,161.5C115.7,173.7,98.1,175.1,83.4,171.5C68.6,168.0,51.2,158.8,42.1,140.2C33.0,121.6,23.7,76.1,29.0,60.0C34.4,43.8,56.2,48.8,74.2,43.3C92.2,37.8,120.7,17.6,137.1,26.7C153.4,35.9,173.4,75.8,172.3,98.3Z;M151.8,105.0C153.1,128.7,149.3,169.1,136.9,180.1C124.6,191.1,91.0,179.6,77.9,171.2C64.8,162.8,62.7,145.4,58.5,129.6C54.3,113.8,49.6,90.7,52.8,76.4C56.0,62.2,65.1,50.8,77.8,44.4C90.5,37.9,116.8,27.8,129.1,37.9C141.4,48.0,150.5,81.3,151.8,105.0Z;M183.4,97.5C185.7,115.7,163.2,146.7,146.5,159.5C129.8,172.3,99.9,179.7,83.0,174.5C66.2,169.2,53.9,149.8,45.3,127.8C36.8,105.8,23.1,60.2,31.5,42.5C39.9,24.9,78.9,20.7,95.8,22.0C112.6,23.3,118.0,37.7,132.6,50.3C147.2,62.9,181.1,79.3,183.4,97.5Z;M172.3,98.3C171.2,120.7,145.4,149.3,130.5,161.5C115.7,173.7,98.1,175.1,83.4,171.5C68.6,168.0,51.2,158.8,42.1,140.2C33.0,121.6,23.7,76.1,29.0,60.0C34.4,43.8,56.2,48.8,74.2,43.3C92.2,37.8,120.7,17.6,137.1,26.7C153.4,35.9,173.4,75.8,172.3,98.3Z"/></path></svg>
+      <svg class="shape-line" viewBox="0 0 200 200" preserveAspectRatio="none" style="rotate:-19deg"><path fill="none" d="M170.0,83.2C169.4,97.5,157.0,125.2,144.2,137.4C131.5,149.6,110.3,154.4,93.2,156.3C76.1,158.1,53.7,161.7,41.6,148.2C29.5,134.7,15.8,93.0,20.7,75.0C25.6,57.0,50.2,44.2,71.3,40.4C92.4,36.5,130.9,44.7,147.4,51.9C163.8,59.0,170.5,69.0,170.0,83.2Z"><animate attributeName="d" dur="27s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M170.0,83.2C169.4,97.5,157.0,125.2,144.2,137.4C131.5,149.6,110.3,154.4,93.2,156.3C76.1,158.1,53.7,161.7,41.6,148.2C29.5,134.7,15.8,93.0,20.7,75.0C25.6,57.0,50.2,44.2,71.3,40.4C92.4,36.5,130.9,44.7,147.4,51.9C163.8,59.0,170.5,69.0,170.0,83.2Z;M160.7,102.0C158.9,120.9,147.2,145.4,135.9,154.1C124.6,162.9,111.0,157.1,92.9,154.6C74.7,152.1,38.0,151.8,26.9,139.3C15.8,126.9,19.3,96.7,26.3,79.9C33.3,63.1,48.8,45.1,68.9,38.5C88.9,32.0,131.4,30.0,146.8,40.6C162.1,51.2,162.5,83.1,160.7,102.0Z;M169.4,89.1C167.5,106.5,146.3,158.5,132.7,171.2C119.1,183.9,105.7,170.3,87.8,165.3C70.0,160.3,36.6,154.5,25.4,140.9C14.1,127.3,7.8,102.9,20.4,83.9C33.0,65.0,80.3,30.0,100.9,27.1C121.6,24.3,132.6,56.3,144.0,66.7C155.4,77.0,171.3,71.7,169.4,89.1Z;M170.0,83.2C169.4,97.5,157.0,125.2,144.2,137.4C131.5,149.6,110.3,154.4,93.2,156.3C76.1,158.1,53.7,161.7,41.6,148.2C29.5,134.7,15.8,93.0,20.7,75.0C25.6,57.0,50.2,44.2,71.3,40.4C92.4,36.5,130.9,44.7,147.4,51.9C163.8,59.0,170.5,69.0,170.0,83.2Z"/></path></svg>
+    </div>
+    <div class="shape shape-2">
+      <svg class="shape-fill" viewBox="0 0 200 200" preserveAspectRatio="none"><path fill="var(--shape-yellow)" d="M162.7,108.6C159.8,125.6,148.0,127.3,137.3,138.1C126.6,148.8,115.1,172.8,98.6,173.2C82.0,173.6,48.3,156.8,38.0,140.4C27.7,123.9,26.4,92.7,36.8,74.4C47.2,56.1,80.7,37.0,100.4,30.6C120.1,24.2,144.6,23.1,155.0,36.0C165.4,49.0,165.7,91.6,162.7,108.6Z"><animate attributeName="d" dur="25s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M162.7,108.6C159.8,125.6,148.0,127.3,137.3,138.1C126.6,148.8,115.1,172.8,98.6,173.2C82.0,173.6,48.3,156.8,38.0,140.4C27.7,123.9,26.4,92.7,36.8,74.4C47.2,56.1,80.7,37.0,100.4,30.6C120.1,24.2,144.6,23.1,155.0,36.0C165.4,49.0,165.7,91.6,162.7,108.6Z;M155.7,91.1C156.6,110.7,147.5,162.5,137.3,173.6C127.0,184.6,114.2,165.1,94.3,157.6C74.3,150.0,30.4,142.1,17.4,128.2C4.4,114.3,2.8,91.4,16.2,74.3C29.5,57.3,78.2,29.0,97.5,26.0C116.9,22.9,122.6,45.3,132.3,56.1C142.0,67.0,154.9,71.5,155.7,91.1Z;M185.8,79.9C186.1,99.5,171.9,137.1,156.2,154.1C140.5,171.2,110.4,187.3,91.5,182.3C72.6,177.3,54.2,141.6,43.0,124.1C31.8,106.7,19.3,90.7,24.6,77.8C29.9,64.8,53.1,53.3,74.7,46.3C96.3,39.3,135.7,30.5,154.2,36.1C172.7,41.6,185.5,60.2,185.8,79.9Z;M162.7,108.6C159.8,125.6,148.0,127.3,137.3,138.1C126.6,148.8,115.1,172.8,98.6,173.2C82.0,173.6,48.3,156.8,38.0,140.4C27.7,123.9,26.4,92.7,36.8,74.4C47.2,56.1,80.7,37.0,100.4,30.6C120.1,24.2,144.6,23.1,155.0,36.0C165.4,49.0,165.7,91.6,162.7,108.6Z"/></path></svg>
+      <svg class="shape-line" viewBox="0 0 200 200" preserveAspectRatio="none" style="rotate:30deg"><path fill="none" d="M159.8,87.1C160.2,108.7,144.9,156.0,134.9,169.4C124.8,182.8,113.1,173.8,99.4,167.3C85.7,160.8,64.0,145.6,53.0,130.4C41.9,115.3,25.1,91.0,33.1,76.4C41.1,61.7,84.2,48.7,100.7,42.6C117.2,36.4,122.5,32.2,132.4,39.7C142.2,47.1,159.3,65.5,159.8,87.1Z"><animate attributeName="d" dur="32s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M159.8,87.1C160.2,108.7,144.9,156.0,134.9,169.4C124.8,182.8,113.1,173.8,99.4,167.3C85.7,160.8,64.0,145.6,53.0,130.4C41.9,115.3,25.1,91.0,33.1,76.4C41.1,61.7,84.2,48.7,100.7,42.6C117.2,36.4,122.5,32.2,132.4,39.7C142.2,47.1,159.3,65.5,159.8,87.1Z;M176.9,93.5C180.8,114.1,168.0,151.6,151.5,166.1C135.0,180.5,96.3,186.2,77.9,180.1C59.5,173.9,46.3,145.8,41.3,129.2C36.2,112.6,39.7,94.9,47.8,80.7C56.0,66.5,76.7,50.3,90.1,44.0C103.5,37.6,113.8,34.1,128.3,42.4C142.8,50.7,173.0,72.9,176.9,93.5Z;M155.9,89.7C156.9,110.2,151.6,134.9,142.3,150.6C133.0,166.2,116.6,188.7,100.3,183.4C84.0,178.2,53.1,139.7,44.6,119.0C36.1,98.3,45.0,72.7,49.4,59.0C53.8,45.4,56.6,42.4,71.0,37.2C85.5,31.9,122.0,18.7,136.1,27.5C150.3,36.2,154.9,69.2,155.9,89.7Z;M159.8,87.1C160.2,108.7,144.9,156.0,134.9,169.4C124.8,182.8,113.1,173.8,99.4,167.3C85.7,160.8,64.0,145.6,53.0,130.4C41.9,115.3,25.1,91.0,33.1,76.4C41.1,61.7,84.2,48.7,100.7,42.6C117.2,36.4,122.5,32.2,132.4,39.7C142.2,47.1,159.3,65.5,159.8,87.1Z"/></path></svg>
+    </div>
+    <div class="shape shape-3">
+      <svg class="shape-fill" viewBox="0 0 200 200" preserveAspectRatio="none"><path fill="var(--shape-pink)" d="M152.7,88.5C153.8,103.2,156.8,126.9,146.0,139.2C135.3,151.5,108.8,165.9,88.5,162.3C68.2,158.7,32.9,132.9,24.5,117.8C16.0,102.7,27.4,86.1,37.6,71.6C47.8,57.1,68.7,34.1,85.7,30.7C102.6,27.4,128.2,41.7,139.4,51.4C150.5,61.0,151.6,73.9,152.7,88.5Z"><animate attributeName="d" dur="21s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M152.7,88.5C153.8,103.2,156.8,126.9,146.0,139.2C135.3,151.5,108.8,165.9,88.5,162.3C68.2,158.7,32.9,132.9,24.5,117.8C16.0,102.7,27.4,86.1,37.6,71.6C47.8,57.1,68.7,34.1,85.7,30.7C102.6,27.4,128.2,41.7,139.4,51.4C150.5,61.0,151.6,73.9,152.7,88.5Z;M150.2,89.5C146.5,105.2,136.5,135.9,123.6,149.5C110.7,163.1,89.5,173.2,72.8,171.3C56.1,169.3,27.3,153.0,23.2,137.6C19.1,122.3,37.2,97.0,48.0,79.1C58.9,61.2,71.8,34.2,88.1,30.3C104.4,26.4,135.4,45.7,145.8,55.5C156.1,65.4,153.9,73.8,150.2,89.5Z;M168.3,114.9C171.6,130.6,160.3,136.1,147.6,146.1C135.0,156.0,113.2,178.7,92.5,174.9C71.8,171.1,31.6,138.8,23.5,123.4C15.4,108.0,36.2,100.1,43.8,82.7C51.4,65.3,55.1,24.3,69.2,19.2C83.2,14.1,111.5,36.0,128.1,51.9C144.6,67.9,165.1,99.2,168.3,114.9Z;M152.7,88.5C153.8,103.2,156.8,126.9,146.0,139.2C135.3,151.5,108.8,165.9,88.5,162.3C68.2,158.7,32.9,132.9,24.5,117.8C16.0,102.7,27.4,86.1,37.6,71.6C47.8,57.1,68.7,34.1,85.7,30.7C102.6,27.4,128.2,41.7,139.4,51.4C150.5,61.0,151.6,73.9,152.7,88.5Z"/></path></svg>
+      <svg class="shape-line" viewBox="0 0 200 200" preserveAspectRatio="none" style="rotate:-30deg"><path fill="none" d="M179.6,113.5C179.8,136.5,159.5,163.1,145.1,170.7C130.7,178.4,110.1,166.4,93.3,159.4C76.4,152.4,53.4,142.0,43.9,128.8C34.3,115.5,28.3,96.0,35.8,79.7C43.3,63.4,70.7,38.9,88.8,31.1C106.8,23.3,129.0,19.0,144.1,32.7C159.3,46.5,179.4,90.6,179.6,113.5Z"><animate attributeName="d" dur="28s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M179.6,113.5C179.8,136.5,159.5,163.1,145.1,170.7C130.7,178.4,110.1,166.4,93.3,159.4C76.4,152.4,53.4,142.0,43.9,128.8C34.3,115.5,28.3,96.0,35.8,79.7C43.3,63.4,70.7,38.9,88.8,31.1C106.8,23.3,129.0,19.0,144.1,32.7C159.3,46.5,179.4,90.6,179.6,113.5Z;M166.6,116.4C168.1,129.6,157.8,129.3,143.0,135.2C128.2,141.0,96.2,153.0,77.7,151.2C59.2,149.4,40.7,137.5,32.1,124.4C23.4,111.3,19.0,85.5,25.9,72.7C32.8,59.9,55.7,50.2,73.6,47.5C91.6,44.7,118.0,44.5,133.5,55.9C149.0,67.4,165.0,103.2,166.6,116.4Z;M161.1,110.2C162.0,124.2,155.6,127.6,142.2,136.9C128.8,146.1,99.1,167.0,80.5,165.5C61.9,164.0,39.0,146.9,30.7,128.0C22.4,109.1,20.5,67.0,30.7,52.3C40.9,37.6,74.3,39.8,92.0,39.8C109.7,39.8,125.4,40.8,136.9,52.5C148.4,64.3,160.2,96.1,161.1,110.2Z;M179.6,113.5C179.8,136.5,159.5,163.1,145.1,170.7C130.7,178.4,110.1,166.4,93.3,159.4C76.4,152.4,53.4,142.0,43.9,128.8C34.3,115.5,28.3,96.0,35.8,79.7C43.3,63.4,70.7,38.9,88.8,31.1C106.8,23.3,129.0,19.0,144.1,32.7C159.3,46.5,179.4,90.6,179.6,113.5Z"/></path></svg>
+    </div>
+    <div class="shape shape-4">
+      <svg class="shape-fill" viewBox="0 0 200 200" preserveAspectRatio="none"><path fill="var(--shape-teal)" d="M168.3,115.5C165.7,129.6,139.8,142.2,123.3,151.6C106.9,161.0,82.9,174.2,69.8,171.7C56.7,169.3,48.3,155.3,44.6,136.8C40.9,118.3,40.7,76.1,47.6,60.5C54.4,45.0,70.5,42.6,85.7,43.7C100.8,44.8,124.9,55.2,138.6,67.2C152.4,79.2,170.8,101.4,168.3,115.5Z"><animate attributeName="d" dur="17s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M168.3,115.5C165.7,129.6,139.8,142.2,123.3,151.6C106.9,161.0,82.9,174.2,69.8,171.7C56.7,169.3,48.3,155.3,44.6,136.8C40.9,118.3,40.7,76.1,47.6,60.5C54.4,45.0,70.5,42.6,85.7,43.7C100.8,44.8,124.9,55.2,138.6,67.2C152.4,79.2,170.8,101.4,168.3,115.5Z;M176.0,101.9C178.9,122.0,165.6,154.5,151.4,164.6C137.2,174.7,108.2,171.4,90.8,162.5C73.4,153.6,56.3,129.7,46.9,111.2C37.4,92.7,25.3,62.8,34.1,51.7C42.8,40.7,82.7,46.1,99.3,44.8C116.0,43.4,121.2,34.3,134.0,43.8C146.8,53.3,173.1,81.8,176.0,101.9Z;M161.2,87.2C159.7,106.6,148.2,163.7,136.6,178.9C125.0,194.0,106.9,183.8,91.7,178.1C76.6,172.4,54.9,160.0,45.9,144.7C36.9,129.4,31.3,103.5,37.7,86.2C44.0,68.9,66.1,44.9,84.1,40.9C102.0,37.0,132.7,54.9,145.6,62.6C158.4,70.3,162.7,67.8,161.2,87.2Z;M168.3,115.5C165.7,129.6,139.8,142.2,123.3,151.6C106.9,161.0,82.9,174.2,69.8,171.7C56.7,169.3,48.3,155.3,44.6,136.8C40.9,118.3,40.7,76.1,47.6,60.5C54.4,45.0,70.5,42.6,85.7,43.7C100.8,44.8,124.9,55.2,138.6,67.2C152.4,79.2,170.8,101.4,168.3,115.5Z"/></path></svg>
+      <svg class="shape-line" viewBox="0 0 200 200" preserveAspectRatio="none" style="rotate:-25deg"><path fill="none" d="M155.6,98.0C155.1,117.6,160.3,149.2,146.2,160.0C132.1,170.8,92.2,170.0,71.0,162.7C49.9,155.4,25.7,132.3,19.3,116.3C12.8,100.3,22.3,82.5,32.3,66.6C42.3,50.7,59.9,24.9,79.4,20.9C99.0,16.9,136.9,29.8,149.6,42.6C162.3,55.5,156.2,78.5,155.6,98.0Z"><animate attributeName="d" dur="24s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M155.6,98.0C155.1,117.6,160.3,149.2,146.2,160.0C132.1,170.8,92.2,170.0,71.0,162.7C49.9,155.4,25.7,132.3,19.3,116.3C12.8,100.3,22.3,82.5,32.3,66.6C42.3,50.7,59.9,24.9,79.4,20.9C99.0,16.9,136.9,29.8,149.6,42.6C162.3,55.5,156.2,78.5,155.6,98.0Z;M167.6,108.8C168.5,127.4,161.9,156.0,148.1,164.1C134.4,172.3,105.4,162.5,84.9,157.7C64.5,152.9,34.8,148.9,25.4,135.3C16.0,121.6,16.2,95.3,28.7,75.8C41.2,56.4,81.3,22.5,100.2,18.6C119.2,14.7,131.3,37.2,142.6,52.2C153.8,67.3,166.6,90.1,167.6,108.8Z;M170.2,87.3C170.8,101.4,163.0,137.7,149.5,149.4C136.1,161.0,106.3,158.3,89.6,157.2C72.9,156.0,55.8,156.2,49.2,142.5C42.6,128.7,41.8,93.7,50.1,74.8C58.3,55.8,82.8,30.4,98.9,28.7C114.9,27.0,134.5,54.8,146.4,64.5C158.2,74.3,169.7,73.1,170.2,87.3Z;M155.6,98.0C155.1,117.6,160.3,149.2,146.2,160.0C132.1,170.8,92.2,170.0,71.0,162.7C49.9,155.4,25.7,132.3,19.3,116.3C12.8,100.3,22.3,82.5,32.3,66.6C42.3,50.7,59.9,24.9,79.4,20.9C99.0,16.9,136.9,29.8,149.6,42.6C162.3,55.5,156.2,78.5,155.6,98.0Z"/></path></svg>
+    </div>
+    <div class="shape shape-5">
+      <svg class="shape-fill" viewBox="0 0 200 200" preserveAspectRatio="none"><path fill="var(--shape-orange)" d="M166.2,87.5C168.4,108.5,155.5,162.3,142.2,174.6C129.0,186.9,104.0,166.8,86.7,161.4C69.5,156.0,43.6,158.2,38.5,142.3C33.5,126.4,46.7,81.5,56.2,65.9C65.7,50.4,83.4,51.8,95.7,48.9C107.9,46.0,117.7,42.1,129.5,48.5C141.2,55.0,164.1,66.5,166.2,87.5Z"><animate attributeName="d" dur="21s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M166.2,87.5C168.4,108.5,155.5,162.3,142.2,174.6C129.0,186.9,104.0,166.8,86.7,161.4C69.5,156.0,43.6,158.2,38.5,142.3C33.5,126.4,46.7,81.5,56.2,65.9C65.7,50.4,83.4,51.8,95.7,48.9C107.9,46.0,117.7,42.1,129.5,48.5C141.2,55.0,164.1,66.5,166.2,87.5Z;M162.8,105.9C164.8,124.1,161.5,142.7,150.7,154.9C139.9,167.1,115.8,181.2,97.9,179.0C80.0,176.9,52.2,158.2,43.4,141.9C34.6,125.6,37.8,99.5,44.9,81.5C52.0,63.5,70.4,40.0,86.0,34.0C101.5,27.9,125.4,33.5,138.2,45.4C151.0,57.4,160.7,87.6,162.8,105.9Z;M156.7,100.8C157.8,116.1,167.9,140.0,155.0,151.2C142.1,162.4,100.5,173.3,79.4,168.1C58.3,162.9,33.0,137.2,28.4,120.1C23.8,102.9,41.3,82.0,51.8,65.1C62.3,48.1,75.4,19.2,91.5,18.3C107.5,17.4,137.3,46.0,148.2,59.7C159.0,73.5,155.5,85.6,156.7,100.8Z;M166.2,87.5C168.4,108.5,155.5,162.3,142.2,174.6C129.0,186.9,104.0,166.8,86.7,161.4C69.5,156.0,43.6,158.2,38.5,142.3C33.5,126.4,46.7,81.5,56.2,65.9C65.7,50.4,83.4,51.8,95.7,48.9C107.9,46.0,117.7,42.1,129.5,48.5C141.2,55.0,164.1,66.5,166.2,87.5Z"/></path></svg>
+      <svg class="shape-line" viewBox="0 0 200 200" preserveAspectRatio="none" style="rotate:-26deg"><path fill="none" d="M159.4,111.8C157.5,127.7,141.1,140.5,130.8,152.2C120.6,163.9,111.0,185.0,98.1,182.0C85.3,178.9,63.9,151.9,53.8,133.9C43.6,115.9,29.5,91.5,37.2,74.0C44.8,56.4,82.2,31.6,99.7,28.7C117.3,25.8,132.6,42.8,142.6,56.6C152.5,70.5,161.4,95.8,159.4,111.8Z"><animate attributeName="d" dur="28s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M159.4,111.8C157.5,127.7,141.1,140.5,130.8,152.2C120.6,163.9,111.0,185.0,98.1,182.0C85.3,178.9,63.9,151.9,53.8,133.9C43.6,115.9,29.5,91.5,37.2,74.0C44.8,56.4,82.2,31.6,99.7,28.7C117.3,25.8,132.6,42.8,142.6,56.6C152.5,70.5,161.4,95.8,159.4,111.8Z;M179.0,105.1C179.8,120.6,170.6,133.9,155.4,146.2C140.2,158.6,108.1,180.4,87.8,179.0C67.5,177.5,41.1,156.3,33.7,137.8C26.3,119.3,31.9,87.5,43.3,67.8C54.7,48.2,84.1,22.3,102.0,19.8C119.9,17.3,138.2,38.6,151.0,52.9C163.8,67.1,178.3,89.5,179.0,105.1Z;M175.9,81.6C177.9,103.9,162.5,154.4,147.7,167.3C132.9,180.2,103.1,164.3,87.1,159.0C71.2,153.8,60.0,148.6,52.0,135.8C44.0,123.1,32.8,100.6,39.1,82.6C45.4,64.7,74.0,36.4,90.0,28.2C106.1,20.0,121.3,24.4,135.6,33.3C149.9,42.2,173.9,59.3,175.9,81.6Z;M159.4,111.8C157.5,127.7,141.1,140.5,130.8,152.2C120.6,163.9,111.0,185.0,98.1,182.0C85.3,178.9,63.9,151.9,53.8,133.9C43.6,115.9,29.5,91.5,37.2,74.0C44.8,56.4,82.2,31.6,99.7,28.7C117.3,25.8,132.6,42.8,142.6,56.6C152.5,70.5,161.4,95.8,159.4,111.8Z"/></path></svg>
+    </div>
+    <div class="shape shape-6">
+      <svg class="shape-fill" viewBox="0 0 200 200" preserveAspectRatio="none"><path fill="var(--shape-pink)" d="M175.6,81.2C170.6,98.5,142.9,134.3,127.6,150.4C112.4,166.5,97.2,181.6,84.1,177.8C71.0,174.0,57.6,143.9,49.0,127.6C40.3,111.4,30.2,97.7,32.3,80.4C34.4,63.1,40.7,29.3,61.6,23.7C82.4,18.2,138.3,37.4,157.3,47.0C176.3,56.6,180.5,64.0,175.6,81.2Z"><animate attributeName="d" dur="26s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M175.6,81.2C170.6,98.5,142.9,134.3,127.6,150.4C112.4,166.5,97.2,181.6,84.1,177.8C71.0,174.0,57.6,143.9,49.0,127.6C40.3,111.4,30.2,97.7,32.3,80.4C34.4,63.1,40.7,29.3,61.6,23.7C82.4,18.2,138.3,37.4,157.3,47.0C176.3,56.6,180.5,64.0,175.6,81.2Z;M173.9,113.5C173.6,134.3,164.4,143.3,148.8,155.5C133.1,167.7,97.8,193.0,80.0,186.6C62.2,180.3,49.3,140.2,42.1,117.7C34.9,95.2,28.4,68.2,36.9,51.6C45.3,34.9,74.1,21.4,93.0,18.0C111.9,14.5,136.6,14.8,150.1,30.7C163.6,46.6,174.1,92.7,173.9,113.5Z;M176.2,114.7C176.5,133.5,156.3,158.5,141.3,169.0C126.3,179.4,101.4,182.4,86.1,177.5C70.9,172.5,55.1,155.8,49.7,139.3C44.4,122.8,49.2,97.2,53.9,78.7C58.6,60.1,63.6,31.7,78.0,27.9C92.3,24.1,123.5,41.4,139.9,55.9C156.3,70.3,176.0,95.8,176.2,114.7Z;M175.6,81.2C170.6,98.5,142.9,134.3,127.6,150.4C112.4,166.5,97.2,181.6,84.1,177.8C71.0,174.0,57.6,143.9,49.0,127.6C40.3,111.4,30.2,97.7,32.3,80.4C34.4,63.1,40.7,29.3,61.6,23.7C82.4,18.2,138.3,37.4,157.3,47.0C176.3,56.6,180.5,64.0,175.6,81.2Z"/></path></svg>
+      <svg class="shape-line" viewBox="0 0 200 200" preserveAspectRatio="none" style="rotate:-5deg"><path fill="none" d="M160.9,93.9C162.8,110.6,150.0,132.5,139.7,145.3C129.4,158.0,114.9,173.6,99.1,170.4C83.3,167.3,55.5,141.2,44.9,126.6C34.3,112.0,28.1,96.9,35.4,82.9C42.8,69.0,73.7,49.2,89.2,42.9C104.7,36.6,116.5,36.5,128.4,45.0C140.4,53.5,159.1,77.1,160.9,93.9Z"><animate attributeName="d" dur="33s" repeatCount="indefinite" calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1" values="M160.9,93.9C162.8,110.6,150.0,132.5,139.7,145.3C129.4,158.0,114.9,173.6,99.1,170.4C83.3,167.3,55.5,141.2,44.9,126.6C34.3,112.0,28.1,96.9,35.4,82.9C42.8,69.0,73.7,49.2,89.2,42.9C104.7,36.6,116.5,36.5,128.4,45.0C140.4,53.5,159.1,77.1,160.9,93.9Z;M170.1,98.0C171.3,118.8,150.0,153.1,138.5,163.9C127.0,174.6,116.9,167.4,101.3,162.6C85.7,157.7,55.1,150.1,44.9,134.6C34.6,119.1,33.5,88.4,39.9,69.5C46.2,50.6,67.7,26.2,82.9,21.2C98.1,16.1,116.6,26.4,131.1,39.2C145.7,52.0,168.9,77.3,170.1,98.0Z;M171.3,105.2C172.6,125.1,160.9,157.0,146.7,169.9C132.5,182.7,106.2,187.2,86.1,182.3C66.0,177.5,33.4,161.6,26.1,140.9C18.8,120.2,31.9,76.1,42.3,58.2C52.6,40.2,71.9,34.5,88.1,33.2C104.3,31.9,125.5,38.4,139.4,50.4C153.2,62.3,170.1,85.2,171.3,105.2Z;M160.9,93.9C162.8,110.6,150.0,132.5,139.7,145.3C129.4,158.0,114.9,173.6,99.1,170.4C83.3,167.3,55.5,141.2,44.9,126.6C34.3,112.0,28.1,96.9,35.4,82.9C42.8,69.0,73.7,49.2,89.2,42.9C104.7,36.6,116.5,36.5,128.4,45.0C140.4,53.5,159.1,77.1,160.9,93.9Z"/></path></svg>
+    </div>
+    <span class="bokeh bokeh-1"></span>
+    <span class="bokeh bokeh-2"></span>
+    <span class="bokeh bokeh-3"></span>
+    <span class="bokeh bokeh-4"></span>
+    <span class="bokeh bokeh-5"></span>
+    <span class="bokeh bokeh-6"></span>
+    <span class="bokeh bokeh-7"></span>
+  </div>
+  <div class="veil" aria-hidden="true"></div>
+
+  <header class="nova-header">
+    <div class="announce" role="region" aria-label="Announcement">
+      <p class="sr-only">NOVA launched in October 2026. Now working with businesses across Europe.</p>
+      <div class="announce-track" aria-hidden="true">
+        <div class="announce-run"><span>NOVA launched in October 2026 · Now working with businesses across Europe</span><span>NOVA launched in October 2026 · Now working with businesses across Europe</span></div>
+        <div class="announce-run"><span>NOVA launched in October 2026 · Now working with businesses across Europe</span><span>NOVA launched in October 2026 · Now working with businesses across Europe</span></div>
+      </div>
+    </div>
+    <div class="nova-header-main">
+      <a class="nova-brand" href="./" aria-label="NOVA home">
+        <svg class="nova-wordmark" viewBox="0 -4 714 208" role="img" aria-label="NOVA"><path fill="currentColor" fill-rule="evenodd" d="M0 0H48L130 134.4V0H170V200H122L40 65.6V200H0Z M190 100a106 106 0 1 0 212 0a106 106 0 1 0-212 0Z M230 100a66 66 0 1 0 132 0a66 66 0 1 0-132 0Z M390 0H435L490 112.2L545 0H590L490 204Z M714 200H669L614 87.8L559 200H514L614-4Z"/></svg>
+      </a>
+      <nav class="nova-header-nav" aria-label="Main navigation">
+        <a href="./" aria-current="page">Home</a>
+        <a href="./about">About</a>
+        <!-- "Log in" removed until the ordering portal exists -->
+        <a class="nav-quote" href="mailto:info@novaporto.eu?subject=Quote%20request" data-quote>Get a quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero: the glowing N alone, full screen, as on the original homepage -->
+    <section class="home-hero" aria-labelledby="home-title">
+      <h1 class="sr-only" id="home-title">NOVA: product sourcing, website design and IT management for businesses across Europe</h1>
+      <img class="n" src="./n.png" width="210" height="232" alt="" fetchpriority="high">
+      <a class="scroll-cue" href="#intro" aria-label="Scroll to what NOVA does">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </a>
+    </section>
+
+    <!-- Intro: what NOVA does, in one statement -->
+    <section class="section intro" id="intro" aria-labelledby="intro-title">
+      <div class="wrap">
+        <p class="eyebrow reveal">NOVA</p>
+        <h2 class="intro-title reveal" id="intro-title">The products and the tech <em>your business runs on.</em></h2>
+        <p class="home-lead reveal">NOVA is a B2B partner for businesses across Europe. We source the products you sell and use, design your website and keep your IT running, with one contact for all of it.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="mailto:info@novaporto.eu?subject=Quote%20request" data-quote>Request a quote
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a class="btn btn-ghost" href="./about">About NOVA</a>
+        </div>
+        <ul class="hero-tagline reveal" aria-label="Services">
+          <li>Product sourcing</li>
+          <li>Supply</li>
+          <li>Website design</li>
+          <li>IT management</li>
+          <li>B2B partnerships</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-run">
+        <span>Retail</span><span>Hospitality</span><span>Food service</span><span>Professional services</span>
+        <span>Retail</span><span>Hospitality</span><span>Food service</span><span>Professional services</span>
+      </div>
+    </div>
+
+    <!-- What we do: four services -->
+    <section class="section" id="supply" aria-labelledby="supply-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">What we do</p>
+            <h2 class="h2 reveal" id="supply-title">Our services</h2>
+          </div>
+          <p class="lead reveal">Four ways businesses work with NOVA.</p>
+        </div>
+        <ul class="cards">
+          <li class="card reveal" style="--i:0">
+            <div class="frame"><picture><source type="image/webp" srcset="assets/about/card-sourcing.webp"><img src="assets/about/card-sourcing.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Product samples on a desk next to a laptop showing a supplier catalogue"></picture></div>
+            <div class="card-body"><p class="card-num">01</p><h3>Product sourcing and supply</h3>
+              <p>Tell us what you need, how many and your budget. We find manufacturers, compare quotes, check samples and manage delivery to your business.</p>
+              <ul class="chips" aria-label="Product categories"><li>Retail stock</li><li>Hospitality supplies</li><li>Smart devices</li><li>Custom branded goods</li></ul></div>
+          </li>
+          <li class="card reveal" style="--i:1">
+            <div class="frame"><picture><source type="image/webp" srcset="assets/about/card-design.webp"><img src="assets/about/card-design.jpg" width="800" height="600" loading="lazy" decoding="async" alt="A website design for a small business shown on a laptop and a phone"></picture></div>
+            <div class="card-body"><p class="card-num">02</p><h3>Website design</h3>
+              <p>Custom websites designed around your brand, or a ready-made template set up with your content when you need to launch fast.</p></div>
+          </li>
+          <li class="card reveal" style="--i:2">
+            <div class="frame"><picture><source type="image/webp" srcset="assets/about/card-it.webp"><img src="assets/about/card-it.jpg" width="800" height="600" loading="lazy" decoding="async" alt="A laptop showing a website dashboard and a business inbox"></picture></div>
+            <div class="card-body"><p class="card-num">03</p><h3>Website and IT management</h3>
+              <p>We look after the technical side for you, from setting up business email to keeping your website running.</p>
+              <!-- NEED: the full list of what management covers (e.g. domain, hosting, SSL, backups, updates, content changes, SEO), and a starting price if you'll show one -->
+            </div>
+          </li>
+          <li class="card reveal" style="--i:3">
+            <div class="frame"><picture><source type="image/webp" srcset="assets/about/card-partners.webp"><img src="assets/about/card-partners.jpg" width="800" height="600" loading="lazy" decoding="async" alt="Two business partners reviewing an order on a tablet"></picture></div>
+            <div class="card-body"><p class="card-num">04</p><h3>B2B partnerships</h3>
+              <p>Already have suppliers? We handle the talks, the orders and the shipping with them for you.</p></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Who we work with: customers grouped into three broad categories -->
+    <section class="section" aria-labelledby="who-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow reveal">Who we work with</p>
+            <h2 class="h2 reveal" id="who-title">Built for businesses that serve people</h2>
+          </div>
+          <p class="lead reveal">Three kinds of businesses across Europe work with NOVA.</p>
+        </div>
+        <ul class="segments">
+          <li class="segment reveal" style="--i:0">
+            <span class="segment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></svg></span>
+            <h3>Retail and commerce</h3>
+            <p>Stock and branded goods to sell, and a website that brings customers through the door.</p>
+          </li>
+          <li class="segment reveal" style="--i:1">
+            <span class="segment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20a1 1 0 0 1-1-1v-1a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v1a1 1 0 0 1-1 1Z"/><path d="M20 16a8 8 0 1 0-16 0"/><path d="M12 4v4"/><path d="M10 4h4"/></svg></span>
+            <h3>Hospitality and food service</h3>
+            <p>Supplies and smart guest tech for places that welcome people, and a website that shows them at their best.</p>
+          </li>
+          <li class="segment reveal" style="--i:2">
+            <span class="segment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></span>
+            <h3>Businesses and professionals</h3>
+            <p>A professional website, business email and IT that keep working, so you can focus on your clients.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Why buy through NOVA: the three promises a buyer can check (full list on the About page) -->
+    <section class="section" aria-labelledby="promise-title" style="padding-top:0">
+      <div class="wrap">
+        <p class="eyebrow reveal">Why NOVA</p>
+        <h2 class="h2 reveal" id="promise-title">New, and easy to check</h2>
+        <p class="lead reveal">NOVA is new, so we can't show you years of reviews yet. Here is what we do on every order, so you can judge us on that.</p>
+        <ul class="promises reveal">
+          <li class="promise"><span class="value-num" aria-hidden="true">01</span>
+            <h3>We test before you pay for the order</h3>
+            <p>We order samples first and check them ourselves. Smart devices get tested on arrival, before they go to you.</p></li>
+          <li class="promise"><span class="value-num" aria-hidden="true">02</span>
+            <h3>Your money is protected</h3>
+            <p>We pay suppliers through protected payment services that refund the order if the goods don't arrive or don't match the agreement.</p></li>
+          <li class="promise"><span class="value-num" aria-hidden="true">03</span>
+            <h3>One contact, start to finish</h3>
+            <p>The person who quotes your order is the person who tracks it and answers when you call.</p>
+            <!-- NEED: phone or WhatsApp number --></li>
+        </ul>
+        <a class="more-link reveal" href="./about#work">How we work
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </section>
+
+    <!-- From your request to your door (same steps as the About page; swap to .kpis when there are real numbers) -->
+    <section class="section" id="how" aria-labelledby="how-title" style="padding-top:0">
+      <div class="wrap">
+        <div class="steps-panel reveal">
+          <p class="eyebrow">How an order works</p>
+          <h2 class="h2" id="how-title">From your request to your door</h2>
+          <ol class="steps">
+            <li class="step">
+              <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+              <h3>Request a quote.</h3>
+              <p>Tell us the product, how many and when you need it.</p>
+            </li>
+            <li class="step">
+              <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 2 2 4-4"/><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"/><path d="m7.5 4.27 9 5.15"/><polyline points="3.29 7 12 12 20.71 7"/><line x1="12" x2="12" y1="22" y2="12"/></svg></span>
+              <h3>Approve the sample.</h3>
+              <p>We source it and send you photos of the sample to approve.</p>
+              <!-- NEED: do you ship samples to customers? If yes: "We source it and send you photos or the sample itself." -->
+            </li>
+            <li class="step">
+              <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.34 2.81 7.76"/><path d="M19 13V7a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v6"/><path d="M12 10v4"/><path d="M12 2v3"/></svg></span>
+              <h3>We handle the logistics.</h3>
+              <p>We place the order, secure the payment and arrange shipping and customs.</p>
+            </li>
+            <li class="step">
+              <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"/></svg></span>
+              <h3>Delivered.</h3>
+              <p>The order arrives at your business.</p>
+              <!-- NEED: typical lead time, e.g. "Typical lead time: 4 to 8 weeks." -->
+            </li>
+          </ol>
+          <div class="steps-foot">
+            <!-- NEED: founding-customer offer, e.g. "First order with NOVA? The first sample is on us." -->
+            <p>Start with one product. We'll tell you what it costs to bring it here.</p>
+            <a class="btn btn-primary" href="mailto:info@novaporto.eu?subject=Quote%20request" data-quote>Request a quote
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA bar -->
+    <section class="cta-bar" aria-labelledby="cta-title">
+      <div class="cta-ticker" aria-hidden="true">Request a quote · Request a quote · Request a quote · Request a quote ·&nbsp;</div>
+      <div class="wrap cta-inner">
+        <div>
+          <h2 id="cta-title">Tell us what your business needs.</h2>
+          <p>We reply with a quote.</p>
+          <!-- NEED: reply time, e.g. "We reply with a quote within two working days." -->
+        </div>
+        <a class="btn btn-ink" href="mailto:info@novaporto.eu?subject=Quote%20request" data-quote>Request a quote
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </section>
+
+    <!-- Newsletter. Brevo-ready: paste your Brevo form action URL into data-brevo-action. -->
+    <section class="section" aria-labelledby="news-title">
+      <div class="wrap news">
+        <div class="news-copy reveal">
+          <h2 id="news-title">Get NOVA updates</h2>
+          <p>New product lines and stock updates, about once a month.</p>
+        </div>
+        <form class="reveal" id="news-form" method="post" action="" data-brevo-action="" novalidate>
+          <label class="field-label" for="news-email">Your work email</label>
+          <div class="field-row">
+            <input class="input" id="news-email" name="EMAIL" type="email" autocomplete="email" placeholder="name@yourbusiness.it" required>
+            <!-- Brevo honeypot field -->
+            <input type="text" name="email_address_check" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
+            <input type="hidden" name="locale" value="en">
+            <button class="btn btn-primary" type="submit">Sign me up</button>
+          </div>
+          <p class="consent">By signing up you agree to our privacy policy. You can unsubscribe at any time.</p>
+          <p class="form-msg" id="news-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="nova-footer">
+    <div class="nova-footer-container">
+      <div class="nova-footer-grid">
+        <div class="nova-footer-brand">
+          <div class="nova-footer-lockup" aria-label="NOVA">
+            <svg class="nova-wordmark" style="width:150px" viewBox="0 -4 714 208" role="img" aria-label="NOVA"><path fill="currentColor" fill-rule="evenodd" d="M0 0H48L130 134.4V0H170V200H122L40 65.6V200H0Z M190 100a106 106 0 1 0 212 0a106 106 0 1 0-212 0Z M230 100a66 66 0 1 0 132 0a66 66 0 1 0-132 0Z M390 0H435L490 112.2L545 0H590L490 204Z M714 200H669L614 87.8L559 200H514L614-4Z"/></svg>
+          </div>
+          <p>One partner for the products and the tech your business runs on.</p>
+        </div>
+        <nav aria-label="Quick links">
+          <h2 class="nova-footer-heading">Quick links</h2>
+          <ul class="nova-footer-links">
+            <li><a href="./" aria-current="page">Home</a></li>
+            <li><a href="./about">About</a></li>
+            <li><a href="mailto:info@novaporto.eu?subject=Quote%20request" data-quote>Request a quote</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2 class="nova-footer-heading">Work with us</h2>
+          <p class="nova-footer-note">Sourcing, websites and IT for businesses across Europe.</p>
+          <p class="nova-footer-note" style="margin-top:12px"><a href="mailto:info@novaporto.eu?subject=Quote%20request" data-quote>Request a quote</a></p>
+          <!-- NEED: Partita IVA and registered office. Italian law requires them on the site of an Italian company, even if the copy doesn't mention Italy. -->
+        </div>
+      </div>
+      <div class="nova-footer-bottom">
+        <p>© <span id="nova-footer-year"></span> NOVA. All rights reserved.</p>
+        <div class="nova-footer-legal" aria-label="Legal information">
+          <span>Policy</span>
+          <span>General terms and conditions</span>
+          <span>Privacy</span>
+          <button type="button" id="cc-reopen">Cookie settings</button>
+        </div>
+        <div class="nova-footer-socials" aria-label="Social media">
+          <span role="img" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.8" r="1.2"/></svg>
+          </span>
+          <a href="https://www.linkedin.com/company/novaporto/" aria-label="NOVA on LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.6H2.1V22h3.1V8.6ZM3.65 2a1.82 1.82 0 1 0 0 3.64 1.82 1.82 0 0 0 0-3.64ZM22 14.3c0-4.03-2.150-5.9-5.02-5.9a4.34 4.34 0 0 0-3.9 2.14V8.6H10V22h3.1v-6.63c0-1.75.33-3.44 2.5-3.44 2.14 0 2.17 2 2.17 3.55V22H22v-7.7Z"/></svg>
+          </a>
+          <a href="https://x.com/novaportoeu" aria-label="NOVA on X" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932zm-1.291 19.49h2.039L6.486 3.24H4.298z"/></svg>
+          </a>
+          <span role="img" aria-label="Alibaba">
+            <svg class="nova-alibaba-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14.391 16.22c-.963.044-.865-.459-.302-1.234c1.32-1.768 3.82-4.236 3.906-5.982c.151-2.283-2.143-3.026-4.501-3.004c-1.645.022-3.344.492-4.501.906C5 8.315 2.489 10.576.909 13.076c-1.677 2.478-1.125 4.847 2.413 4.924c2.716-.109 4.480-.862 6.32-1.802c.01 0-5.086 1.453-6.958.383c-.193-.11-.404-.264-.457-.683c-.012-.885 1.46-1.802 2.283-2.097v-1.533a5.4 5.4 0 0 0 1.955.366a5.380 5.380 0 0 0 3.472-1.265c.037.13.056.278.044.447h.371c.048-.394-.172-.706-.172-.706c-.333-.529-.915-.52-.915-.52s.315.137.529.466a4.95 4.95 0 0 1-4.665.932l1.21-1.2l-.336-.874c2.435-.852 4.48-1.507 7.812-2.085l-.746-.624l.389-.24c2.01.568 3.325.985 3.253 2.051a2.7 2.7 0 0 1-.202.611c-.584 1.158-2.326 3.090-3.029 3.898c-.465.535-.92 1.060-1.245 1.562c-.335.503-.54.971-.551 1.42c.043 3.504 10.334-1.640 12.324-3.003c-2.943 1.266-6.113 2.489-9.609 2.718"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quote request dialog. Opens from every "Request a quote" button; without JS the buttons fall back to mailto. -->
+  <dialog class="quote-dialog" id="quote-dialog" aria-labelledby="quote-title">
+    <form class="quote-form" id="quote-form" method="dialog">
+      <button class="quote-close" type="button" id="quote-close" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <h2 id="quote-title">Request a quote</h2>
+      <p class="sub">Tell us the product, how many and when you need it.</p>
+      <div class="two">
+        <div><label class="field-label" for="q-name">Your name</label><input class="input" id="q-name" name="name" autocomplete="name" required></div>
+        <div><label class="field-label" for="q-biz">Business</label><input class="input" id="q-biz" name="business" autocomplete="organization" placeholder="Shop, hotel, restaurant…"></div>
+      </div>
+      <div><label class="field-label" for="q-email">Work email</label><input class="input" id="q-email" name="email" type="email" autocomplete="email" required></div>
+      <div><label class="field-label" for="q-msg">What do you need?</label><textarea class="input" id="q-msg" name="message" required placeholder="e.g. a new website and business email for our team"></textarea></div>
+      <button class="btn btn-primary" type="submit">Send request
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></button>
+      <p class="consent">This opens your email app with the request filled in, addressed to NOVA.</p>
+    </form>
+  </dialog>
+
+  <div class="cc" id="cc" role="dialog" aria-modal="false" aria-labelledby="cc-title" data-nosnippet hidden>
+    <h2 id="cc-title">Cookie settings</h2>
+    <p>We use essential storage to make this site work. With your consent, we may also use analytics and marketing cookies. You can change your choice at any time.</p>
+    <div class="cc-panel" id="cc-panel" hidden>
+      <label class="cc-opt"><input type="checkbox" checked disabled><div><strong>Necessary</strong><span>Required for the site to work, for example remembering this choice. Always on.</span></div></label>
+      <label class="cc-opt"><input type="checkbox" id="cc-analytics"><div><strong>Analytics</strong><span>Helps us understand how visitors use the site.</span></div></label>
+      <label class="cc-opt"><input type="checkbox" id="cc-marketing"><div><strong>Marketing</strong><span>Used to show relevant content and measure campaigns.</span></div></label>
+    </div>
+    <div class="cc-actions">
+      <button type="button" id="cc-reject">Reject all</button>
+      <button type="button" id="cc-custom">Customise</button>
+      <button type="button" id="cc-save" hidden>Save choices</button>
+      <button type="button" class="primary" id="cc-accept">Accept all</button>
+    </div>
+  </div>
+
+  <script>
+    /* =========================================================
+       SETTINGS: change these in one place
+       ========================================================= */
+    // NEED: confirm the address quote requests should go to. Also update the mailto: links in the HTML.
+    var NOVA_QUOTE_EMAIL = 'info@novaporto.eu';
+
+    var COMING_2027 = []; // 2027 lines live on the About page
+
+    (function () {
+      var $ = function (id) { return document.getElementById(id); };
+      var draft = false;
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---------- Hero media: fade in only if the files exist ---------- */
+      var media = $('hero-media'), video = $('hero-video');
+      if (media && video) {
+        var poster = new Image();
+        poster.onload = function () { media.classList.add('ready'); };
+        poster.src = video.getAttribute('poster');
+        video.addEventListener('loadeddata', function () {
+          media.classList.add('ready');
+          if (!reduce) video.play().catch(function () {});
+        });
+      }
+
+      /* ---------- 2027 cards ---------- */
+      var list = $('soon-cards'), section = $('soon');
+      var shown = !list ? [] : COMING_2027.filter(function (b) { return b.quarter || draft; });
+      shown.forEach(function (b, i) {
+        var li = document.createElement('li');
+        li.className = 'card reveal' + (b.quarter ? '' : ' is-draft');
+        li.style.setProperty('--i', i % 4);
+        li.innerHTML =
+          '<div class="frame" style="aspect-ratio:4/3"><span class="tag"></span><picture>' +
+          '<source type="image/webp" srcset="assets/about/' + b.image + '.webp">' +
+          '<img src="assets/about/' + b.image + '.jpg" width="600" height="450" loading="lazy" decoding="async" alt=""></picture></div>' +
+          '<div class="card-body"><h3></h3><p></p><button type="button" class="card-link" data-branch="">Tell me when it launches</button></div>';
+        li.querySelector('.tag').textContent = b.quarter ? 'From ' + b.quarter : 'Quarter: NEED';
+        li.querySelector('img').alt = b.alt;
+        li.querySelector('h3').textContent = b.title;
+        li.querySelector('p').textContent = b.text;
+        var btn = li.querySelector('.card-link');
+        btn.dataset.branch = b.title;
+        btn.setAttribute('aria-label', 'Tell me when ' + b.title + ' launches');
+        if (!b.quarter) {
+          var flag = document.createElement('span');
+          flag.className = 'need-flag';
+          flag.textContent = 'NEED: ' + b.need;
+          li.querySelector('.card-body').insertBefore(flag, btn);
+        }
+        list.appendChild(li);
+      });
+      if (shown.length) section.hidden = false;
+      if (draft && list) {
+        var banner = document.createElement('div');
+        banner.className = 'draft-banner';
+        banner.textContent = 'Draft preview: shows unconfirmed 2027 lines. Not what visitors see.';
+        document.body.appendChild(banner);
+      }
+
+      /* ---------- Quote dialog ---------- */
+      var dialog = $('quote-dialog'), form = $('quote-form'), msg = $('q-msg');
+      var lastTrigger = null;
+      function openQuote(prefill, trigger) {
+        lastTrigger = trigger || null;
+        if (!dialog.showModal) { location.href = 'mailto:' + NOVA_QUOTE_EMAIL + '?subject=' + encodeURIComponent('Quote request'); return; }
+        if (prefill) msg.value = prefill;
+        dialog.showModal();
+        setTimeout(function () { $('q-name').focus(); }, 30);
+      }
+      document.addEventListener('click', function (e) {
+        var q = e.target.closest('[data-quote]');
+        if (q) { e.preventDefault(); openQuote('', q); return; }
+        var b = e.target.closest('[data-branch]');
+        if (b) openQuote('Please contact me when ' + b.dataset.branch + ' launches. What we would need: ', b);
+      });
+      $('quote-close').addEventListener('click', function () { dialog.close(); });
+      dialog.addEventListener('click', function (e) { if (e.target === dialog) dialog.close(); });
+      dialog.addEventListener('close', function () { if (lastTrigger) lastTrigger.focus(); });
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var d = new FormData(form);
+        var body = d.get('message') + '\n\n' + d.get('name') + (d.get('business') ? ', ' + d.get('business') : '') + '\n' + d.get('email');
+        var subject = 'Quote request' + (d.get('business') ? ' from ' + d.get('business') : '');
+        location.href = 'mailto:' + NOVA_QUOTE_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        if (window.dataLayer) dataLayer.push({ event: 'quote_request', page: 'about' });
+        dialog.close();
+      });
+
+      /* ---------- Newsletter (Brevo-ready, no API key) ---------- */
+      var news = $('news-form'), newsMsg = $('news-msg');
+      news.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = $('news-email');
+        if (!email.checkValidity()) { newsMsg.dataset.state = 'info'; newsMsg.textContent = 'Please enter a valid email address.'; email.focus(); return; }
+        var action = news.dataset.brevoAction;
+        if (!action) {
+          // Not connected yet: say so honestly instead of pretending the signup worked.
+          newsMsg.dataset.state = 'info';
+          newsMsg.innerHTML = 'Sign-up opens soon. Until then, write to <a href="mailto:' + NOVA_QUOTE_EMAIL + '?subject=NOVA%20updates">' + NOVA_QUOTE_EMAIL + '</a> and we\'ll add you.';
+          return;
+        }
+        fetch(action, { method: 'POST', body: new FormData(news), mode: 'no-cors' }).then(function () {
+          newsMsg.dataset.state = 'ok';
+          newsMsg.textContent = "You're on the list. The next update arrives in your inbox.";
+          news.reset();
+        }).catch(function () {
+          newsMsg.dataset.state = 'info';
+          newsMsg.textContent = 'That did not go through. Please try again in a minute.';
+        });
+      });
+
+      /* ---------- Reveal on scroll + veil ---------- */
+      var targets = document.querySelectorAll('.reveal, .steps');
+      if ('IntersectionObserver' in window && !reduce) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        targets.forEach(function (t) { io.observe(t); });
+      } else {
+        targets.forEach(function (t) { t.classList.add('in'); });
+      }
+      var root = document.documentElement, ticking = false;
+      function veil() {
+        ticking = false;
+        var p = Math.min(1, window.scrollY / (window.innerHeight * 0.7));
+        root.style.setProperty('--veil', (0.3 + p * 0.38).toFixed(3));
+      }
+      addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(veil); } }, { passive: true });
+      veil();
+
+      /* ---------- Footer year + cookie consent (live site) ---------- */
+      var footerYear = $('nova-footer-year');
+      if (footerYear) footerYear.textContent = new Date().getFullYear();
+      var KEY = 'nova-consent-v1';
+      var box = $('cc'), panel = $('cc-panel'), reopen = $('cc-reopen');
+      var read = function () { try { return JSON.parse(localStorage.getItem(KEY)); } catch (e) { return null; } };
+      function apply(c) { window.novaConsent = c; document.dispatchEvent(new CustomEvent('nova-consent', { detail: c })); }
+      function save(analytics, marketing) {
+        var c = { necessary: true, analytics: analytics, marketing: marketing, date: new Date().toISOString() };
+        try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
+        box.hidden = true; apply(c);
+      }
+      function openCc() {
+        var c = read() || {};
+        $('cc-analytics').checked = !!c.analytics; $('cc-marketing').checked = !!c.marketing;
+        box.hidden = false;
+      }
+      $('cc-accept').onclick = function () { save(true, true); };
+      $('cc-reject').onclick = function () { save(false, false); };
+      $('cc-custom').onclick = function () { panel.hidden = false; this.hidden = true; $('cc-save').hidden = false; };
+      $('cc-save').onclick = function () { save($('cc-analytics').checked, $('cc-marketing').checked); };
+      reopen.addEventListener('click', openCc);
+      var c = read();
+      if (c) { apply(c); } else { openCc(); }
+    })();
+  </script>
+</body>
+</html>

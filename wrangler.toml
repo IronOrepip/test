@@ -1,0 +1,45 @@
+# One Worker serves the built site (dist/) and the /api/ routes.
+# Secrets are never written here: set them with `wrangler secret put NAME --env staging`.
+# See .env.example for the list of names.
+
+# ---- Production (not deployed yet: no route until go-live) ----
+name = "nova-site"
+main = "worker/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = false
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+run_worker_first = true
+not_found_handling = "404-page"
+
+[vars]
+ENVIRONMENT = "production"
+SHOP_LIVE = "false"            # stays false until the company exists and I switch it on
+SITE_URL = "https://novaporto.eu"
+ADMIN_REQUIRE_MFA = "false"    # becomes "true" in phase 2, once two-step sign-in can be enrolled
+
+[triggers]
+crons = ["*/10 * * * *"]       # retries failed emails
+
+# ---- Staging: https://staging.novaporto.eu, password-protected, Stripe test mode only ----
+[env.staging]
+name = "nova-staging"
+workers_dev = false
+routes = [{ pattern = "staging.novaporto.eu/*", zone_name = "novaporto.eu" }]
+
+[env.staging.assets]
+directory = "./dist"
+binding = "ASSETS"
+run_worker_first = true
+not_found_handling = "404-page"
+
+[env.staging.vars]
+ENVIRONMENT = "staging"
+SHOP_LIVE = "false"
+SITE_URL = "https://staging.novaporto.eu"
+ADMIN_REQUIRE_MFA = "false"
+
+[env.staging.triggers]
+crons = ["*/10 * * * *"]

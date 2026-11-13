@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.wrangler/
+.dev/
+.dev.vars
+.env
+.env.*
+!.env.example
+email-previews/
+screenshots/

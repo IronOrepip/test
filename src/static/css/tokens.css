@@ -1,0 +1,135 @@
+/* NOVA design tokens. Source of truth: DESIGN.md.
+   No hex colour, font size or spacing value may appear outside this file.
+   Breakpoints cannot be CSS variables inside @media, so they are fixed numbers used the same
+   way everywhere: 767px (mobile max), 768px, 995px, 996px (desktop), 1139px, 1140px (full nav). */
+
+:root {
+  /* Colour (DESIGN.md section 2) */
+  --text-primary: #101418;
+  --text-secondary: #5a636d;
+  --text-on-dark-2: #8b939c;
+  --text-inverse: #f4f5f6;
+  --bg-page: #ffffff;
+  --bg-surface: #f4f5f6;
+  --bg-inverse: #101418;
+  --action-primary: #f2500f;
+  --action-primary-hover: #d9460d;
+  --action-secondary: #101418;
+  --border: #8b939c;
+  --border-subtle: #e3e5e8;
+  --focus-ring: #f2500f;
+  --glass-fill: #ffffff24;
+  --glass-border: #ffffff4d;
+  --scrim: #10141880;
+  --tint-hover: #1014181a;
+  --tint-hover-inverse: #f4f5f61a;
+
+  /* Type (section 3) */
+  --font-display: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --font-body: Barlow, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --fs-display-xl: 48px;
+  --fs-display-lg: 40px;
+  --fs-display-md: 30px;
+  --fs-title: 20px;
+  --fs-body: 16px;
+  --fs-ui: 15px;
+  --fs-small: 14px;
+  --fs-label: 12px;
+  --lh-display: 1.1;
+  --lh-display-md: 1.15;
+  --lh-title: 1.3;
+  --lh-body: 24px;
+  --lh-ui: 1.2;
+  --lh-label: 1.4;
+  --ls-display: 0.02em;
+  --ls-display-md: 0.01em;
+  --ls-label: 0.1em;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+
+  /* Spacing scale, steps 0 to 10 (section 5) */
+  --s0: 0;
+  --s1: 2px;
+  --s2: 4px;
+  --s3: 8px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --s7: 40px;
+  --s8: 64px;
+  --s9: 80px;
+  --s10: 120px;
+  --gutter: 24px;
+
+  /* Layout */
+  --content: 1150px;
+  --content-wide: 1160px;
+  --measure: 65ch;
+  --intro-max: 580px;
+  --form-max: 480px;
+  --drawer-w: 420px;
+  --header-h: 64px;
+  --logo-w: 104px;
+  --logo-w-lg: 160px;
+  --logo-min: 64px;
+  --hero-min: 560px;
+  --hero-mark: 150px;
+  --card-min: 240px;
+  --carousel-card: 262px;
+  --thumb: 72px;
+
+  /* Shape, rules, controls */
+  --radius: 4px;
+  --radius-glass: 14px;
+  --border-w: 1px;
+  --rule-w: 2px;
+  --control-lg: 48px;
+  --control-sm: 32px;
+  --icon: 20px;
+  --icon-sm: 16px;
+  --progress-h: 2px;
+  --ring: 0 0 0 2px var(--focus-ring);
+  --ring-offset: 2px;
+  --disabled: 0.3;
+  --glass-filter: blur(16px) saturate(160%);
+
+  /* Motion (section 6) */
+  --t-fast: 80ms;
+  --t-nav: 200ms;
+  --t-img: 300ms;
+  --nav-shift: -4px;
+
+  /* Hero media only: the glow of the animated mark. Part of the picture, not of the interface. */
+  --hero-glow: drop-shadow(0 0 2px #fffaf2) drop-shadow(0 0 8px #fff6e8) drop-shadow(0 0 20px #fff0dcd9) drop-shadow(0 0 44px #ffecd699);
+  --hero-glow-dim: drop-shadow(0 0 1px #fffaf299) drop-shadow(0 0 4px #fff6e873) drop-shadow(0 0 10px #fff0dc4d) drop-shadow(0 0 22px #ffecd626);
+  --hero-pulse: 4.5s;
+  --hero-veil: #10141866;
+
+  /* Layers */
+  --z-header: 20;
+  --z-overlay: 40;
+  --z-banner: 60;
+}
+
+/* Mobile: display sizes step down one level; spacing steps 5 and up drop one level. */
+@media (max-width: 767px) {
+  :root {
+    --fs-display-xl: 36px;
+    --fs-display-lg: 32px;
+    --fs-display-md: 26px;
+    --fs-ui: 14px;
+    --s5: 16px;
+    --s6: 24px;
+    --s7: 32px;
+    --s8: 40px;
+    --s9: 64px;
+    --s10: 80px;
+    --gutter: 16px;
+    --header-h: 56px;
+    --logo-w: 84px;
+    --hero-mark: 110px;
+    --carousel-card: 232px;
+  }
+}

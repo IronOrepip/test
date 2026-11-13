@@ -1,0 +1,216 @@
+{
+  "_note": "PLACEHOLDER CATALOGUE. Names, prices, stock, tax codes and customs data are samples so the shop can be built and tested. TODO: confirm every value before going live. Prices are in cents, excluding VAT. Edit this file, then run `npm run seed` and `npm run build`.",
+  "products": [
+    {
+      "id": "NFC-CARD-PVC",
+      "slug": "nfc-card-white-pvc",
+      "type": "standard",
+      "category": "nfc-cards",
+      "featured": true,
+      "active": true,
+      "sort": 10,
+      "min_quantity": 1,
+      "quantity_step": 1,
+      "max_online_quantity": 200,
+      "low_stock_threshold": 20,
+      "dispatch_days": 2,
+      "weight_grams": 6,
+      "tax_code": "txcd_99999999",
+      "regions": ["eu_eea", "uk"],
+      "customs": { "hs_code": "TODO", "origin": "TODO" },
+      "images": [],
+      "translations": {
+        "en": {
+          "name": "NFC card, white PVC",
+          "short_description": "Blank white NFC card in standard bank-card size, ready to program.",
+          "description": "A blank white PVC card with an NFC chip inside. Program it with a phone to open a link, share contact details or connect to Wi-Fi. Size 85.6 x 54 mm. Choose the chip by how much memory you need."
+        }
+      },
+      "variants": [
+        { "id": "NFC-CARD-PVC-213", "options": { "chip": "NTAG213" }, "stock": 500, "sort": 1 },
+        { "id": "NFC-CARD-PVC-215", "options": { "chip": "NTAG215" }, "stock": 300, "sort": 2 },
+        { "id": "NFC-CARD-PVC-216", "options": { "chip": "NTAG216" }, "stock": 120, "sort": 3 }
+      ],
+      "price_breaks": [
+        { "currency": "EUR", "min_quantity": 1, "unit_amount": 120 },
+        { "currency": "EUR", "min_quantity": 25, "unit_amount": 95 },
+        { "currency": "EUR", "min_quantity": 100, "unit_amount": 75 },
+        { "currency": "EUR", "variant_id": "NFC-CARD-PVC-216", "min_quantity": 1, "unit_amount": 190 },
+        { "currency": "EUR", "variant_id": "NFC-CARD-PVC-216", "min_quantity": 25, "unit_amount": 160 },
+        { "currency": "EUR", "variant_id": "NFC-CARD-PVC-216", "min_quantity": 100, "unit_amount": 135 }
+      ]
+    },
+    {
+      "id": "NFC-STICKER-25",
+      "slug": "nfc-sticker-25mm",
+      "type": "standard",
+      "category": "nfc-stickers",
+      "featured": true,
+      "active": true,
+      "sort": 20,
+      "min_quantity": 10,
+      "quantity_step": 10,
+      "max_online_quantity": 200,
+      "low_stock_threshold": 50,
+      "dispatch_days": 2,
+      "weight_grams": 1,
+      "tax_code": "txcd_99999999",
+      "regions": ["eu_eea", "uk"],
+      "customs": { "hs_code": "TODO", "origin": "TODO" },
+      "images": [
+        { "src": "/assets/img/samples/nfc-stickers.webp", "width": 1200, "height": 900, "sample": true, "alt": { "en": "Sample photo: assorted square and round NFC stickers on a white table" } }
+      ],
+      "translations": {
+        "en": {
+          "name": "NFC sticker, 25 mm round",
+          "short_description": "Self-adhesive NFC sticker, 25 mm across, sold in tens.",
+          "description": "A thin self-adhesive NFC sticker for menus, counters, packaging and posters. 25 mm across. Do not stick it directly on metal: the signal will not read."
+        }
+      },
+      "variants": [
+        { "id": "NFC-STICKER-25-213", "options": { "chip": "NTAG213" }, "stock": 2000, "sort": 1 },
+        { "id": "NFC-STICKER-25-215", "options": { "chip": "NTAG215" }, "stock": 30, "sort": 2 }
+      ],
+      "price_breaks": [
+        { "currency": "EUR", "min_quantity": 10, "unit_amount": 60 },
+        { "currency": "EUR", "min_quantity": 50, "unit_amount": 45 },
+        { "currency": "EUR", "min_quantity": 200, "unit_amount": 35 }
+      ]
+    },
+    {
+      "id": "NFC-STAND-ACR",
+      "slug": "nfc-table-stand",
+      "type": "standard",
+      "category": "nfc-stands",
+      "featured": true,
+      "active": true,
+      "sort": 30,
+      "min_quantity": 1,
+      "quantity_step": 1,
+      "max_online_quantity": 200,
+      "low_stock_threshold": 10,
+      "dispatch_days": 3,
+      "weight_grams": 90,
+      "tax_code": "txcd_99999999",
+      "regions": ["eu_eea", "uk"],
+      "customs": { "hs_code": "TODO", "origin": "TODO" },
+      "images": [],
+      "translations": {
+        "en": {
+          "name": "NFC table stand",
+          "short_description": "Acrylic stand with an NFC chip, for tables, counters and reception desks.",
+          "description": "A small acrylic stand with an NFC chip inside. Guests tap it with a phone to open your menu, your review page or your Wi-Fi. Size 90 x 90 mm."
+        }
+      },
+      "variants": [
+        { "id": "NFC-STAND-ACR-BLK", "options": { "colour": "Black" }, "stock": 40, "sort": 1 },
+        { "id": "NFC-STAND-ACR-WHT", "options": { "colour": "White" }, "stock": 0, "sort": 2 }
+      ],
+      "price_breaks": [
+        { "currency": "EUR", "min_quantity": 1, "unit_amount": 990 },
+        { "currency": "EUR", "min_quantity": 10, "unit_amount": 850 },
+        { "currency": "EUR", "min_quantity": 50, "unit_amount": 720 }
+      ]
+    },
+    {
+      "id": "NFC-TAG-EPOXY",
+      "slug": "nfc-epoxy-tag",
+      "type": "standard",
+      "category": "souvenirs",
+      "featured": true,
+      "active": true,
+      "sort": 40,
+      "min_quantity": 1,
+      "quantity_step": 1,
+      "max_online_quantity": 200,
+      "low_stock_threshold": 15,
+      "dispatch_days": 2,
+      "weight_grams": 5,
+      "tax_code": "txcd_99999999",
+      "regions": ["eu_eea", "uk"],
+      "customs": { "hs_code": "TODO", "origin": "TODO" },
+      "images": [
+        { "src": "/assets/img/samples/nfc-tag.webp", "width": 1200, "height": 900, "sample": true, "alt": { "en": "Sample photo: round black epoxy NFC tag with a key ring hole" } }
+      ],
+      "translations": {
+        "en": {
+          "name": "NFC epoxy tag",
+          "short_description": "Round epoxy-coated NFC tag with a hole for a key ring.",
+          "description": "A round NFC tag with a hard epoxy coating and a hole for a key ring or cord. 30 mm across. Water resistant."
+        }
+      },
+      "variants": [
+        { "id": "NFC-TAG-EPOXY-BLK", "options": { "colour": "Black" }, "stock": 150, "sort": 1 }
+      ],
+      "price_breaks": [
+        { "currency": "EUR", "min_quantity": 1, "unit_amount": 250 },
+        { "currency": "EUR", "min_quantity": 25, "unit_amount": 190 },
+        { "currency": "EUR", "min_quantity": 100, "unit_amount": 150 }
+      ]
+    },
+    {
+      "id": "WEB-MENU",
+      "slug": "restaurant-menu-website",
+      "type": "website",
+      "category": "digital",
+      "featured": true,
+      "active": true,
+      "sort": 50,
+      "min_quantity": 1,
+      "quantity_step": 1,
+      "max_online_quantity": 1,
+      "dispatch_days": 5,
+      "tax_code": "txcd_20030000",
+      "regions": ["eu_eea", "uk"],
+      "demo_url": null,
+      "setup_fields": ["business_name", "logo", "texts", "photos", "domain"],
+      "images": [
+        { "src": "/assets/img/samples/workspace.webp", "width": 1200, "height": 900, "sample": true, "alt": { "en": "Sample photo: a laptop, a notebook and a coffee on a wooden table" } }
+      ],
+      "translations": {
+        "en": {
+          "name": "Restaurant menu website",
+          "short_description": "A ready-made website with your menu, opening hours and contact details, set up for you.",
+          "description": "A ready-made one-page website for a restaurant, bar or cafe. After you pay, you send us your details and we set the site up for you. You review it and approve it before it goes live."
+        }
+      },
+      "variants": [
+        { "id": "WEB-MENU-STD", "options": {}, "stock": null, "sort": 1 }
+      ],
+      "price_breaks": [
+        { "currency": "EUR", "min_quantity": 1, "unit_amount": 49000, "billing": "one_off" }
+      ]
+    },
+    {
+      "id": "WEB-SHOPFRONT",
+      "slug": "shop-front-website",
+      "type": "website",
+      "category": "digital",
+      "featured": false,
+      "active": true,
+      "sort": 60,
+      "min_quantity": 1,
+      "quantity_step": 1,
+      "max_online_quantity": 1,
+      "dispatch_days": 7,
+      "tax_code": "txcd_20030000",
+      "regions": ["eu_eea", "uk"],
+      "demo_url": null,
+      "setup_fields": ["business_name", "logo", "texts", "photos", "domain"],
+      "images": [],
+      "translations": {
+        "en": {
+          "name": "Shop front website",
+          "short_description": "A ready-made website that presents your shop, your products and how to find you.",
+          "description": "A ready-made website of up to five pages for a shop or a professional. After you pay, you send us your details and we set the site up for you. You review it and approve it before it goes live."
+        }
+      },
+      "variants": [
+        { "id": "WEB-SHOPFRONT-STD", "options": {}, "stock": null, "sort": 1 }
+      ],
+      "price_breaks": [
+        { "currency": "EUR", "min_quantity": 1, "unit_amount": 69000, "billing": "one_off" }
+      ]
+    }
+  ]
+}

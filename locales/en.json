@@ -1,0 +1,546 @@
+{
+  "meta": {
+    "description": "NOVA is a B2B partner for businesses across Europe: product sourcing and supply, website design, and website and IT management. Shop NFC products or request a quote."
+  },
+  "nav": {
+    "skip": "Skip to content",
+    "main": "Main navigation",
+    "breadcrumbs": "Breadcrumbs",
+    "logo_label": "NOVA home",
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "cart": "Cart",
+    "sign_in": "Sign in",
+    "sign_out": "Sign out",
+    "admin": "Orders (admin)",
+    "language": "Language",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu"
+  },
+  "common": { "close": "Close", "new_tab": "(opens in a new tab)" },
+  "cta": {
+    "quote": "Request a quote",
+    "title": "Tell us what your business needs.",
+    "text": "We reply with a quote."
+  },
+  "form": {
+    "name": "Your name",
+    "business": "Business (optional)",
+    "email": "Work email",
+    "email_placeholder": "name@yourbusiness.eu"
+  },
+  "quote": {
+    "title": "Request a quote",
+    "sub": "Tell us the product, how many and when you need it.",
+    "message": "What do you need?",
+    "send": "Send request"
+  },
+  "cookie": {
+    "title": "Cookie settings",
+    "text": "We use essential storage to make this site and the shop work. With your consent, we also use analytics and marketing cookies. You can change your choice at any time.",
+    "necessary": "Necessary",
+    "necessary_text": "Needed for the site, the cart and secure payment. Always on.",
+    "analytics": "Analytics",
+    "analytics_text": "Helps us understand how visitors use the site.",
+    "marketing": "Marketing",
+    "marketing_text": "Used to show relevant content and measure campaigns.",
+    "reject": "Reject all",
+    "customise": "Customise",
+    "save": "Save choices",
+    "accept": "Accept all"
+  },
+  "footer": {
+    "tagline": "One partner for the products and the tech your business runs on.",
+    "quick_links": "Quick links",
+    "shop": "Shop",
+    "all_products": "All products",
+    "help": "Help",
+    "shipping": "Shipping",
+    "returns": "Returns",
+    "faq": "Questions and answers",
+    "company_details": "Company details",
+    "rights": "All rights reserved.",
+    "terms": "Terms of sale",
+    "withdrawal": "Withdrawal form",
+    "privacy": "Privacy",
+    "linkedin": "NOVA on LinkedIn (opens in a new tab)",
+    "x": "NOVA on X (opens in a new tab)"
+  },
+  "categories": {
+    "nfc-cards": { "name": "NFC cards", "lead": "Blank NFC cards, ready to program." },
+    "nfc-stands": { "name": "NFC stands", "lead": "NFC stands for tables, counters and reception desks." },
+    "nfc-stickers": { "name": "NFC stickers", "lead": "Self-adhesive NFC stickers for menus, packaging and posters." },
+    "souvenirs": { "name": "Souvenirs", "lead": "NFC tags and small goods to sell or give to guests." },
+    "digital": { "name": "Ready-made websites", "lead": "Websites we set up for you with your content." }
+  },
+  "options": { "chip": "Chip", "colour": "Colour", "size": "Size" },
+  "setup_fields": {
+    "business_name": "Your business name",
+    "logo": "Your logo (PNG, JPG, SVG or PDF)",
+    "texts": "Your texts: what you offer, opening hours, contact details",
+    "photos": "Your photos",
+    "domain": "The web address you want, or the one you already own"
+  },
+  "home": {
+    "meta_title": "NOVA | NFC products, websites and sourcing for businesses in Europe",
+    "eyebrow": "For businesses across Europe",
+    "title": "The products and the tech your business runs on.",
+    "lead": "We source the products you sell and use, design your website and keep your IT running, with one contact for all of it.",
+    "shop_cta": "Shop NFC products",
+    "about_cta": "About us",
+    "quick_label": "What we do",
+    "tags": ["Product sourcing", "Supply", "Website design", "IT management", "B2B partnerships"]
+  },
+  "discover": {
+    "eyebrow": "Shop",
+    "title": "Discover NOVA",
+    "lead": "NFC products held in stock, and ready-made websites we set up for you.",
+    "carousel_label": "Featured products",
+    "all_title": "See the full range",
+    "all": "Browse all products",
+    "prev": "Previous products",
+    "next": "Next products"
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Our services",
+    "lead": "Four ways businesses work with us.",
+    "items": [
+      { "title": "Product sourcing and supply", "text": "Tell us what you need, how many and your budget. We find manufacturers, compare quotes, check samples and manage delivery to your business.", "chips": ["Retail stock", "Hospitality supplies", "Smart devices", "Custom branded goods"] },
+      { "title": "Website design", "text": "Custom websites designed around your brand, or a ready-made template set up with your content when you need to launch fast." },
+      { "title": "Website and IT management", "text": "We look after the technical side for you, from setting up business email to keeping your website running." },
+      { "title": "B2B partnerships", "text": "Already have suppliers? We handle the talks, the orders and the shipping with them for you." }
+    ]
+  },
+  "segments": {
+    "eyebrow": "Who we work with",
+    "title": "Built for businesses that serve people",
+    "lead": "Three kinds of businesses across Europe work with us.",
+    "items": [
+      { "title": "Retail and commerce", "text": "Stock and branded goods to sell, and a website that brings customers through the door." },
+      { "title": "Hospitality and food service", "text": "Supplies and smart guest tech for places that welcome people, and a website that shows them at their best." },
+      { "title": "Businesses and professionals", "text": "A professional website, business email and IT that keep working, so you can focus on your clients." }
+    ]
+  },
+  "promises": {
+    "eyebrow": "Our promises",
+    "title": "New, and easy to check",
+    "lead": "We are new, so we cannot show you years of reviews yet. Here is what we do on every order, so you can judge us on that.",
+    "more": "How we work",
+    "items": [
+      { "title": "We test before you pay for the order", "text": "We order samples first and check them ourselves. Smart devices get tested on arrival, before they go to you." },
+      { "title": "Your money is protected", "text": "We pay suppliers through protected payment services that refund the order if the goods do not arrive or do not match the agreement." },
+      { "title": "One contact, start to finish", "text": "The person who quotes your order is the person who tracks it and answers when you call." },
+      { "title": "Your website, looked after", "text": "The team that designs your website keeps it running, so a change, a new email account or an update goes through the same person." }
+    ]
+  },
+  "steps": {
+    "eyebrow": "How a sourcing order works",
+    "title": "From your request to your door",
+    "foot": "Start with one product. We will tell you what it costs to bring it here.",
+    "items": [
+      { "title": "Request a quote.", "text": "Tell us the product, how many and when you need it." },
+      { "title": "Approve the sample.", "text": "We source it and send you photos of the sample to approve." },
+      { "title": "We handle the logistics.", "text": "We place the order, secure the payment and arrange shipping and customs." },
+      { "title": "Delivered.", "text": "The order arrives at your business." }
+    ]
+  },
+  "about": {
+    "meta_title": "About NOVA | Sourcing, websites and IT for European businesses",
+    "meta_description": "NOVA is a B2B partner for businesses across Europe. We source products, design websites and manage IT, with one contact from the first quote to the delivery.",
+    "eyebrow": "About",
+    "title": "One partner for the products and the tech your business runs on.",
+    "lead": "Product sourcing, supply, website design, IT management and B2B partnerships.",
+    "welcome_title": "Who we are",
+    "welcome": [
+      "NOVA is a B2B partner for businesses across Europe. We find the products you sell and use, and we design and look after the websites and tech you run on. You tell us what you need. We find the supplier, check the samples and manage the delivery, or design your website and keep it running.",
+      "We are a new company, started in October 2026. You deal with one person from the first quote to the delivery."
+    ],
+    "facts_label": "Key facts",
+    "facts": [["Started", "October 2026"], ["Serving", "Businesses across Europe"], ["Contact", "One person per client"]],
+    "faq_eyebrow": "FAQ",
+    "faq_title": "Questions businesses ask us",
+    "faq_text": "Your question is not here? Ask it with your quote request and we will answer it there.",
+    "faq": [
+      { "q": "Can I see a product before ordering in quantity?", "a": "Yes. We send you photos of the sample first, so you can approve it before the full order." },
+      { "q": "Can I buy NFC products without a quote?", "a": "Yes. NFC products held in stock can be ordered in the shop, up to 200 pieces per product. For more, request a quote." }
+    ]
+  },
+  "contact": {
+    "meta_title": "Contact NOVA",
+    "eyebrow": "Contact",
+    "title": "Write to us",
+    "lead": "Ask a question, request a quote or tell us about an order. We reply by email.",
+    "message": "Your message",
+    "send": "Send message",
+    "privacy_note": "We use your details only to answer you. See the privacy page.",
+    "details": "Contact details",
+    "email_label": "General",
+    "orders_label": "Orders",
+    "linkedin": "NOVA on LinkedIn",
+    "quote_hint": "For a quote, tell us the product, how many and when you need it."
+  },
+  "shop": {
+    "title": "Shop",
+    "lead": "NFC products held in stock and ready-made websites. No minimum order.",
+    "categories": "Categories",
+    "filters": "Filter and sort products",
+    "filter_category": "Category",
+    "filter_type": "Type",
+    "all": "All",
+    "type_standard": "Shipped products",
+    "type_website": "Websites",
+    "sort": "Sort by",
+    "sort_featured": "Featured",
+    "sort_name": "Name",
+    "sort_price_asc": "Price, low to high",
+    "sort_price_desc": "Price, high to low",
+    "empty_title": "No products match",
+    "empty_text": "Change the filters, or see all products.",
+    "help_line": "Need help?",
+    "quote_large": "Quote for more than 200 pieces"
+  },
+  "product": {
+    "from": "From",
+    "sample_photo": "Sample photo",
+    "photo_to_follow": "Photo to follow",
+    "add_named": "Add {name} to cart",
+    "standard": "Standard",
+    "variant": "Option",
+    "quantity": "Quantity",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "qty_hint": "Minimum {min}, in steps of {step}, up to {max} online.",
+    "price_breaks": "Price by quantity",
+    "unit_price": "Unit price",
+    "price_once": "One-off price",
+    "above_max": "More than {max} pieces?",
+    "line_total": "Line total",
+    "add_to_cart": "Add to cart",
+    "view_demo": "View demo",
+    "demo_soon": "A demo link will be added here.",
+    "back_in_stock": "Email me when back in stock",
+    "notify_me": "Notify me",
+    "description": "Description",
+    "specs": "Details",
+    "sku": "Code",
+    "availability": "Availability",
+    "stock_checking": "Checking stock",
+    "dispatch": "Dispatch",
+    "setup_time": "Set-up time",
+    "days": "{n} working days",
+    "delivery": "Delivery",
+    "delivery_digital": "Online. No shipping.",
+    "weight": "Weight",
+    "delivery_countries": "We deliver to",
+    "you_supply": "What you send us after payment",
+    "website_process": "After payment we email you a form for these details. We set the site up, you review it, and it goes live when you approve it.",
+    "website_withdrawal": "Because we start work at your request, you lose your right of withdrawal once the website is delivered.",
+    "returns_line": "Returns within 14 days of delivery, unused and in the original packaging.",
+    "related": "Related products",
+    "view_image": "Show image {n}"
+  },
+  "cart": {
+    "title": "Cart",
+    "drawer_title": "Your cart",
+    "loading": "Loading your cart…",
+    "error": "The cart could not be loaded. Check your connection and reload the page.",
+    "empty_title": "Your cart is empty",
+    "empty_text": "Add a product to start an order.",
+    "continue": "Continue shopping",
+    "view_cart": "View cart",
+    "check_out": "Check out",
+    "summary": "Order summary",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total_ex_vat": "Total excluding VAT",
+    "vat_note": "Prices exclude VAT. VAT is calculated at payment from your country.",
+    "country": "Delivery country",
+    "choose_country": "Choose a country",
+    "other_country": "Another country",
+    "country_hint": "Used for the shipping estimate. You enter the full address at payment.",
+    "no_ship": "We do not ship to your country yet.",
+    "waiver": "I ask NOVA to start work straight away and understand I lose my right of withdrawal once the website is delivered.",
+    "news_optin": "Send me news and offers by email. Optional.",
+    "soon": "Shop opening soon. Online payment is not switched on yet. To order now, request a quote.",
+    "legal_before": "Before you pay, read our",
+    "pay_on_stripe": "Payment is taken on Stripe's secure page, where you accept the terms and see the final VAT."
+  },
+  "success": {
+    "meta_title": "Order status",
+    "eyebrow": "Checkout",
+    "confirming_title": "We are confirming your payment",
+    "confirming_text": "This takes a few seconds. Please keep this page open.",
+    "summary": "Order summary",
+    "order_number": "Order number",
+    "status": "Status",
+    "email": "Confirmation sent to",
+    "total": "Total paid",
+    "email_note": "A confirmation email is on its way. Keep your order number for any question.",
+    "website_note": "For your website, we will email you a form to send us your details.",
+    "account_note": "Customer accounts open soon. You will be able to create one with this email address and see this order."
+  },
+  "cancelled": {
+    "eyebrow": "Checkout",
+    "title": "Payment cancelled",
+    "text": "No payment was taken. Your items are still in your cart.",
+    "back": "Back to cart"
+  },
+  "auth": {
+    "sign_in_title": "Sign in",
+    "sign_in_lead": "Customer accounts open soon. You never need an account to order: guest checkout is always available.",
+    "password": "Password",
+    "sign_in": "Sign in"
+  },
+  "admin": {
+    "eyebrow": "Admin",
+    "orders": "Orders",
+    "checking": "Checking your access…",
+    "search": "Search",
+    "search_hint": "Order number or email",
+    "status": "Status",
+    "apply": "Apply",
+    "col_number": "Order",
+    "col_date": "Date",
+    "col_customer": "Customer",
+    "col_items": "Items",
+    "col_total": "Total",
+    "col_payment": "Payment",
+    "phase_note": "Order detail, status changes, tracking, stock and CSV export come with phase 2. Refunds are made in the Stripe dashboard."
+  },
+  "notfound": { "title": "Page not found", "text": "The page may have moved. Try the home page or the shop." },
+  "docs": {
+    "todo_banner": "TODO: placeholder text. Confirm with a lawyer before the shop goes live.",
+    "help_shipping": {
+      "eyebrow": "Help",
+      "title": "Shipping",
+      "lead": "Where we deliver, what it costs and how long it takes.",
+      "sections": [
+        { "h": "Where we deliver", "p": ["We deliver to the 27 countries of the European Union and to Norway, Iceland and Liechtenstein. If your country is not in the list at checkout, write to us."] },
+        { "h": "Cost", "p": ["Shipping is a flat rate per order, shown in the cart before you pay. TODO: confirm amounts. Ready-made websites have no shipping."] },
+        { "h": "Time", "p": ["Each product page shows how many working days we need to dispatch. Delivery then takes 3 to 7 working days. TODO: confirm."] },
+        { "h": "Tracking", "p": ["We email you the tracking number when your order ships."] },
+        { "h": "Large quantities", "p": ["You can order up to 200 pieces of a product online. For more, request a quote and we will price the order and the shipping together."] }
+      ]
+    },
+    "help_returns": {
+      "eyebrow": "Help",
+      "title": "Returns",
+      "lead": "How to return a product and what to expect.",
+      "sections": [
+        { "h": "NFC products", "p": ["You can return NFC products within 14 days of delivery. They must be unused and in the original packaging. You pay the return shipping."] },
+        { "h": "Ready-made websites", "p": ["We start work on a website at your request, straight after payment. Once the website is delivered, the right of withdrawal ends. You confirm this with a tick box before you pay."] },
+        { "h": "Faulty goods", "p": ["Consumers keep the 2-year legal guarantee for faulty goods. Business buyers have no right of withdrawal, but can claim for faulty goods."] },
+        { "h": "How to start a return", "p": ["Write to orders@novaporto.eu with your order number. We reply with the return address. Refunds go back to the payment method you used."] }
+      ]
+    },
+    "help_faq": {
+      "eyebrow": "Help",
+      "title": "Questions and answers",
+      "lead": "Short answers about ordering in the shop.",
+      "sections": [
+        { "h": "Is there a minimum order?", "p": ["No. Some products are sold in steps, for example stickers in tens. The product page shows it."] },
+        { "h": "Do prices include VAT?", "p": ["No. Prices are shown excluding VAT. The VAT for your country is calculated on the payment page, before you pay. Businesses can enter a VAT number there."] },
+        { "h": "Do I need an account?", "p": ["No. You can always check out as a guest."] },
+        { "h": "How can I pay?", "p": ["By card, Apple Pay, Google Pay or Link, on Stripe's secure payment page. We never see or store your card details."] },
+        { "h": "Do I get an invoice?", "p": ["Yes. An invoice or receipt is created for every paid order."] },
+        { "h": "Can I order more than 200 pieces?", "p": ["Yes, with a quote. Use the Request a quote button on any page."] }
+      ]
+    },
+    "legal_terms": {
+      "eyebrow": "Legal",
+      "title": "Terms of sale",
+      "lead": "The terms that apply when you order in the shop.",
+      "sections": [
+        { "h": "Seller", "p": ["TODO: legal name, registered address and VAT number of the company."] },
+        { "h": "Prices and payment", "p": ["Prices are shown excluding VAT. VAT is added at payment according to your country. Payment is taken by Stripe when you place the order."] },
+        { "h": "Delivery", "p": ["We deliver to the countries listed on the shipping page. Delivery times are estimates."] },
+        { "h": "Right of withdrawal", "p": ["Consumers can withdraw from a purchase of NFC products within 14 days of delivery, as described on the returns page. For ready-made websites the right of withdrawal ends once the website is delivered, when work started at your request."] },
+        { "h": "Guarantee", "p": ["Consumers have the 2-year legal guarantee for faulty goods. Business buyers have no right of withdrawal, only claims for faulty goods."] },
+        { "h": "Law and disputes", "p": ["TODO: governing law, court and consumer dispute resolution information."] }
+      ]
+    },
+    "legal_withdrawal": {
+      "eyebrow": "Legal",
+      "title": "Model withdrawal form",
+      "lead": "Fill in and send this form only if you want to withdraw from your order.",
+      "sections": [
+        { "h": "To", "p": ["TODO: legal name and address of the company. Email: orders@novaporto.eu"] },
+        { "h": "Text of the form", "p": ["I hereby give notice that I withdraw from my contract of sale of the following goods:", "Ordered on / received on:", "Order number:", "Name of consumer:", "Address of consumer:", "Date:"] },
+        { "h": "How to send it", "p": ["Email the completed text to orders@novaporto.eu. We confirm that we received it."] }
+      ]
+    },
+    "legal_privacy": {
+      "eyebrow": "Legal",
+      "title": "Privacy",
+      "lead": "What data the shop uses and who processes it for us.",
+      "sections": [
+        { "h": "Who is responsible", "p": ["TODO: legal name and address of the company. Contact: info@novaporto.eu"] },
+        { "h": "What we collect", "p": ["When you order: your name, email, delivery and billing address, VAT number if you give one, and what you ordered. We do not see or store card details."] },
+        { "h": "Processors", "p": ["These companies process data for us:"], "list": ["Stripe: payment, tax calculation, invoices and fraud prevention", "Supabase (EU region, Frankfurt): order and account database", "Resend: sending order emails", "Cloudflare: hosting, security and bot protection (Turnstile)"] },
+        { "h": "Cookies", "p": ["Necessary storage keeps your cart, your cookie choice and your session, and Stripe sets fraud-prevention cookies on its payment page. Analytics and marketing cookies are used only if you accept them in the cookie settings."] },
+        { "h": "Your rights", "p": ["You can ask for a copy of your data or for its deletion by writing to info@novaporto.eu. Invoices and order records are kept for the period the law requires."] }
+      ]
+    }
+  },
+  "client": {
+    "status": {
+      "pending": "Pending",
+      "paid": "Paid",
+      "awaiting_details": "Awaiting details",
+      "in_setup": "In set-up",
+      "ready_for_review": "Ready for review",
+      "packed": "Packed",
+      "shipped": "Shipped",
+      "delivered": "Delivered",
+      "cancelled": "Cancelled",
+      "refunded": "Refunded",
+      "partially_refunded": "Partially refunded"
+    },
+    "cart": {
+      "count_one": "{n} item in cart",
+      "count_other": "{n} items in cart",
+      "empty": "Your cart is empty.",
+      "remove": "Remove",
+      "remove_named": "Remove {name}",
+      "qty_named": "Quantity for {name}",
+      "decrease_named": "Decrease quantity for {name}",
+      "increase_named": "Increase quantity for {name}",
+      "each": "each",
+      "added": "Added to cart",
+      "updating": "Updating…"
+    },
+    "stock": {
+      "in_stock": "In stock",
+      "only_left": "Only {n} left",
+      "out": "Out of stock",
+      "available": "Available",
+      "unknown": "Stock not checked"
+    },
+    "product": {
+      "from": "From",
+      "reason_out": "This option is out of stock.",
+      "reason_max": "For more than {max} pieces, request a quote.",
+      "reason_min": "The minimum quantity is {min}.",
+      "reason_step": "This product is sold in steps of {step}.",
+      "reason_stock": "Only {n} left. Lower the quantity.",
+      "reason_region": "This product is not available in your region.",
+      "bis_ok": "Thank you. We will email you when it is back in stock.",
+      "bis_error": "Enter a valid email address."
+    },
+    "shop": {
+      "results_one": "{n} product",
+      "results_other": "{n} products",
+      "loading": "Updating prices and stock…",
+      "error": "Live prices and stock could not be loaded. The cart always shows the current price."
+    },
+    "cartpage": {
+      "change_price": "The price of {name} changed from {old} to {new}.",
+      "change_unavailable": "{name} is no longer available and was removed from your cart.",
+      "change_stock": "Only {n} of {name} left. The quantity was lowered.",
+      "change_qty": "The quantity of {name} was adjusted to {n}.",
+      "shipping_tbd": "Choose a country",
+      "shipping_none": "No shipping",
+      "delivery": "Delivery takes {min} to {max} working days after dispatch.",
+      "delivery_digital": "Websites are delivered online.",
+      "err_country": "Choose your delivery country.",
+      "err_waiver": "Tick this box to order a website.",
+      "err_turnstile": "Complete the security check and try again.",
+      "err_generic": "Checkout could not start. Please try again.",
+      "err_stock": "Some items are no longer available in that quantity. Your cart was updated.",
+      "err_region": "We do not ship to that country yet.",
+      "err_rate": "Too many attempts. Wait a minute and try again.",
+      "err_soon": "The shop is not open for payment yet.",
+      "redirecting": "Taking you to secure payment…"
+    },
+    "success": {
+      "paid_title": "Thank you. Your order is confirmed.",
+      "paid_text": "Order {number} is paid.",
+      "pending_title": "Your payment is being processed",
+      "pending_text": "Your bank is still confirming the payment for order {number}. We will email you when it is done. You do not need to pay again.",
+      "timeout_title": "We are still confirming your payment",
+      "timeout_text": "This is taking longer than usual. You do not need to pay again. We will email you as soon as it is confirmed.",
+      "cancelled_title": "This order was not paid",
+      "cancelled_text": "No payment was taken for order {number}. Your cart is unchanged.",
+      "missing_title": "We could not find this checkout",
+      "missing_text": "If you paid, you will still get a confirmation email. If not, go back to your cart."
+    },
+    "form": {
+      "required": "This field is required.",
+      "email": "Enter a valid email address.",
+      "sending": "Sending…",
+      "sent": "Thank you. We received your message and will reply by email.",
+      "failed": "That did not go through. You can also write to {email}.",
+      "turnstile": "Complete the security check and try again."
+    },
+    "auth": {
+      "invalid": "The email or password is not correct.",
+      "rate": "Too many attempts. Wait a minute and try again.",
+      "error": "Sign-in is not available right now. Please try again later.",
+      "account": "Account menu"
+    },
+    "admin": {
+      "denied": "This page is for the shop admin only.",
+      "signin": "Sign in to see orders.",
+      "count_one": "{n} order",
+      "count_other": "{n} orders",
+      "none": "No orders match.",
+      "error": "Orders could not be loaded.",
+      "open_payment": "Open payment in Stripe (opens in a new tab)",
+      "guest": "Guest"
+    }
+  },
+  "email": {
+    "footer_help": "Questions? Reply to this email.",
+    "footer_company": "Company details",
+    "labels": {
+      "order": "Order",
+      "date": "Date",
+      "item": "Item",
+      "qty": "Qty",
+      "price": "Price",
+      "subtotal": "Subtotal",
+      "shipping": "Shipping",
+      "tax": "VAT",
+      "total": "Total",
+      "ship_to": "Deliver to",
+      "customer": "Customer",
+      "status": "Status",
+      "from": "From",
+      "message": "Message",
+      "details": "Details"
+    },
+    "order_confirmation": {
+      "subject": "Your NOVA order {number}",
+      "heading": "Thank you for your order",
+      "intro": "We received your payment for order {number}. Here is what you ordered.",
+      "next_goods": "What happens next: we pack your order and email you the tracking number when it ships.",
+      "next_website": "What happens next: we will email you a form to send us the details for your website.",
+      "invoice_button": "View your invoice",
+      "returns": "Returns: NFC products can be returned within 14 days of delivery, unused and in the original packaging."
+    },
+    "new_order_alert": {
+      "subject": "New order {number}: {total}",
+      "heading": "New paid order",
+      "intro": "Order {number} was paid."
+    },
+    "problem_alert": {
+      "subject": "Shop problem: {title}",
+      "heading": "Something needs your attention",
+      "intro": "The shop reported a problem."
+    },
+    "low_stock_alert": {
+      "subject": "Low stock: {sku}",
+      "heading": "Low stock",
+      "intro": "These items are at or below their low-stock level."
+    },
+    "contact_message": {
+      "subject_contact": "Website message from {name}",
+      "subject_quote": "Quote request from {name}",
+      "heading_contact": "New message from the website",
+      "heading_quote": "New quote request"
+    }
+  }
+}
