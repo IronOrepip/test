@@ -2,11 +2,11 @@
 // Email clients do not support CSS variables or web fonts, so the colours below repeat the
 // DESIGN.md palette as literal values with an Arial / monospace fallback stack.
 import en from '../locales/en.json' with { type: 'json' };
-import it from '../locales/it.json' with { type: 'json' };
 import { site } from '../config/site.mjs';
 import { rpc } from './lib.js';
 
-const locales = { en, it };
+// Add each new language here once its locales/<code>.json exists (see README, "Adding a language").
+const locales = { en };
 const INK = '#101418', STEEL = '#5a636d', RULE = '#e3e5e8', ORANGE = '#f2500f', WHITE = '#ffffff';
 const SANS = 'Arial, Helvetica, sans-serif';
 const MONO = "'Courier New', Courier, monospace";
